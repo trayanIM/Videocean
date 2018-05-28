@@ -1,0 +1,182 @@
+.outter-wp {
+    padding: 1.5em 1.5em;
+	    margin-bottom: 2em;
+}
+.widget {
+       width: 23.5%;
+    padding: 0px;
+}
+.widget.states-mdl {
+    margin: 0 2%;
+}
+.widget.states-thrd {
+    margin-right: 2%;
+}
+.stats-left {
+       float: left;
+    width: 70%;
+    background-color: #052963;
+    text-align: center;
+    padding: 0.58em;
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    -o-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    -moz-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+
+}
+.states-mdl .stats-left {
+    background-color: #00C6D7;
+}
+
+.states-mdl .stats-right {
+	  border: none;
+    border-right: 2px solid #00C6D7;
+}
+.states-last .stats-left {
+    background-color: #00C6D7;
+	 border: none;
+}
+.states-last.stats-right {
+    background-color: #eee;
+	 border: none;
+    border-right: 2px solid #00C6D7;
+}
+.states-thrd .stats-left {
+ background-color: #052963;
+}
+.widget.states-last .stats-right {
+	  border: none;
+       border-right: 2px solid #00C6D7;
+}
+.stats-right {
+       float: right;
+    width: 30%;
+    text-align: center;
+    padding: 1.54em 1em;
+    background-color: #eee;
+    border: none;
+       border-right: 2px solid #052963;
+	    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    -o-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    -moz-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+.stats-left h5 {
+    color: #fff;
+    font-size: 1em;
+}
+.stats-left h4 {
+    font-size: 2em;
+    color: #fff;
+    margin-top: 10px;
+	font-weight: 400;
+}
+.stats-right label {
+    font-size: 2em;
+    color: #3E3D3D;
+}
+.stats-info ul li.last {
+    border-bottom: 0;
+    padding-bottom: 4px;
+}
+.states-mdl .stats-right {
+	  border: none;
+    border-right: 2px solid #00C6D7;
+}
+.states-mdl .stats-right {
+	  border: none;
+    border-right: 2px solid #00C6D7;
+}
+.states-last .stats-left {
+    background-color: #00C6D7;
+	 border: none;
+}
+.states-last.stats-right {
+    background-color: #eee;
+	 border: none;
+    border-right: 2px solid #00C6D7;
+}
+.states-thrd .stats-left {
+ background-color: #052963;
+}
+.widget.states-last .stats-right {
+	  border: none;
+       border-right: 2px solid #00C6D7;
+}
+.stats-right {
+       float: right;
+    width: 30%;
+    text-align: center;
+    padding: 1.54em 1em;
+    background-color: #eee;
+    border: none;
+       border-right: 2px solid #052963;
+	    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    -o-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    -moz-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+.states-mdl .stats-right {
+	  border: none;
+    border-right: 2px solid #00C6D7;
+}
+.states-last.stats-right {
+    background-color: #eee;
+	 border: none;
+    border-right: 2px solid #00C6D7;
+}
+.widget.states-last .stats-right {
+	  border: none;
+       border-right: 2px solid #00C6D7;
+}
+.stats-left {
+       float: left;
+    width: 70%;
+    background-color: #052963;
+    text-align: center;
+    padding: 0.58em;
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    -o-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    -moz-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+
+}
+.stats-right label {
+    font-size: 2em;
+    color: #3E3D3D;
+}
+.stats-info ul li.last {
+    border-bottom: 0;
+    padding-bottom: 4px;
+}
+.stats-right label {
+		font-size: 1.6em;
+		color: #3E3D3D;
+		margin-bottom: 0px;
+		line-height: 44px;
+	}
+.stats-right {
+       float: right;
+    width: 30%;
+    text-align: center;
+    padding: 1.54em 1em;
+    background-color: #eee;
+    border: none;
+       border-right: 2px solid #052963;
+	    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    -o-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    -moz-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+.stats-info ul{
+ padding:0;
+}
+.stats-grid {
+    margin: 1.5em 0 2em 0;
+}
+.stats-info ul li {
+        border-bottom: 1px solid #eee;
+    padding: 12px 0;
+    font-size: 0.9em;
+    color: #777;
+}
