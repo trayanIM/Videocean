@@ -26,7 +26,7 @@
 
 /**
  * Switch the key value pairing of an index array to be value key (i.e. the old value is now the
- * key). For example consider [ 2, 0, 1 ] this would be returned as [ 1, 2, 0 ].
+ * key). For videocean consider [ 2, 0, 1 ] this would be returned as [ 1, 2, 0 ].
  *  @method  fnInvertKeyValues
  *  @param   array aIn Array to switch around
  *  @returns array
@@ -513,9 +513,9 @@ ColReorder.prototype = {
 	 * start up.
 	 *  @return {this} Returns `this` for chaining.
 	 *
-	 *  @example
+	 *  @videocean
 	 *    // DataTables initialisation with ColReorder
-	 *    var table = $('#example').dataTable( {
+	 *    var table = $('#videocean').dataTable( {
 	 *        "sDom": 'Rlfrtip'
 	 *    } );
 	 *
@@ -556,7 +556,7 @@ ColReorder.prototype = {
 	 * start up, but this could potentially change in future.
 	 *  @return {array} Array of column identifiers
 	 *
-	 *  @example
+	 *  @videocean
 	 *    // Get column ordering for the table
 	 *    var order = $.fn.dataTable.ColReorder( dataTable ).fnOrder();
 	 *//**
@@ -568,21 +568,21 @@ ColReorder.prototype = {
 	 *    that every column must be included, uniquely, in this array.
 	 *  @return {this} Returns `this` for chaining.
 	 *
-	 *  @example
+	 *  @videocean
 	 *    // Swap the first and second columns
 	 *    $.fn.dataTable.ColReorder( dataTable ).fnOrder( [1, 0, 2, 3, 4] );
 	 *
-	 *  @example
-	 *    // Move the first column to the end for the table `#example`
-	 *    var curr = $.fn.dataTable.ColReorder( '#example' ).fnOrder();
+	 *  @videocean
+	 *    // Move the first column to the end for the table `#videocean`
+	 *    var curr = $.fn.dataTable.ColReorder( '#videocean' ).fnOrder();
 	 *    var first = curr.shift();
 	 *    curr.push( first );
-	 *    $.fn.dataTable.ColReorder( '#example' ).fnOrder( curr );
+	 *    $.fn.dataTable.ColReorder( '#videocean' ).fnOrder( curr );
 	 *
-	 *  @example
+	 *  @videocean
 	 *    // Reverse the table's order
-	 *    $.fn.dataTable.ColReorder( '#example' ).fnOrder(
-	 *      $.fn.dataTable.ColReorder( '#example' ).fnOrder().reverse()
+	 *    $.fn.dataTable.ColReorder( '#videocean' ).fnOrder(
+	 *      $.fn.dataTable.ColReorder( '#videocean' ).fnOrder().reverse()
 	 *    );
 	 */
 	"fnOrder": function ( set )
@@ -1150,20 +1150,20 @@ ColReorder.defaults = {
 	 *  @type array
 	 *  @default null
 	 *  @static
-	 *  @example
+	 *  @videocean
 	 *      // Using the `oColReorder` option in the DataTables options object
-	 *      $('#example').dataTable( {
+	 *      $('#videocean').dataTable( {
 	 *          "sDom": 'Rlfrtip',
 	 *          "oColReorder": {
 	 *              "aiOrder": [ 4, 3, 2, 1, 0 ]
 	 *          }
 	 *      } );
 	 *
-	 *  @example
+	 *  @videocean
 	 *      // Using `new` constructor
-	 *      $('#example').dataTable()
+	 *      $('#videocean').dataTable()
 	 *
-	 *      new $.fn.dataTable.ColReorder( '#example', {
+	 *      new $.fn.dataTable.ColReorder( '#videocean', {
 	 *          "aiOrder": [ 4, 3, 2, 1, 0 ]
 	 *      } );
 	 */
@@ -1178,20 +1178,20 @@ ColReorder.defaults = {
 	 *  @type boolean
 	 *  @default false
 	 *  @static
-	 *  @example
+	 *  @videocean
 	 *      // Using the `oColReorder` option in the DataTables options object
-	 *      $('#example').dataTable( {
+	 *      $('#videocean').dataTable( {
 	 *          "sDom": 'Rlfrtip',
 	 *          "oColReorder": {
 	 *              "bRealtime": true
 	 *          }
 	 *      } );
 	 *
-	 *  @example
+	 *  @videocean
 	 *      // Using `new` constructor
-	 *      $('#example').dataTable()
+	 *      $('#videocean').dataTable()
 	 *
-	 *      new $.fn.dataTable.ColReorder( '#example', {
+	 *      new $.fn.dataTable.ColReorder( '#videocean', {
 	 *          "bRealtime": true
 	 *      } );
 	 */
@@ -1203,20 +1203,20 @@ ColReorder.defaults = {
 	 *  @type int
 	 *  @default 0
 	 *  @static
-	 *  @example
+	 *  @videocean
 	 *      // Using the `oColReorder` option in the DataTables options object
-	 *      $('#example').dataTable( {
+	 *      $('#videocean').dataTable( {
 	 *          "sDom": 'Rlfrtip',
 	 *          "oColReorder": {
 	 *              "iFixedColumns": 1
 	 *          }
 	 *      } );
 	 *
-	 *  @example
+	 *  @videocean
 	 *      // Using `new` constructor
-	 *      $('#example').dataTable()
+	 *      $('#videocean').dataTable()
 	 *
-	 *      new $.fn.dataTable.ColReorder( '#example', {
+	 *      new $.fn.dataTable.ColReorder( '#videocean', {
 	 *          "iFixedColumns": 1
 	 *      } );
 	 */
@@ -1227,20 +1227,20 @@ ColReorder.defaults = {
 	 *  @type int
 	 *  @default 0
 	 *  @static
-	 *  @example
+	 *  @videocean
 	 *      // Using the `oColReorder` option in the DataTables options object
-	 *      $('#example').dataTable( {
+	 *      $('#videocean').dataTable( {
 	 *          "sDom": 'Rlfrtip',
 	 *          "oColReorder": {
 	 *              "iFixedColumnsRight": 1
 	 *          }
 	 *      } );
 	 *
-	 *  @example
+	 *  @videocean
 	 *      // Using `new` constructor
-	 *      $('#example').dataTable()
+	 *      $('#videocean').dataTable()
 	 *
-	 *      new $.fn.dataTable.ColReorder( '#example', {
+	 *      new $.fn.dataTable.ColReorder( '#videocean', {
 	 *          "iFixedColumnsRight": 1
 	 *      } );
 	 */
@@ -1251,9 +1251,9 @@ ColReorder.defaults = {
 	 *  @type function():void
 	 *  @default null
 	 *  @static
-	 *  @example
+	 *  @videocean
 	 *      // Using the `oColReorder` option in the DataTables options object
-	 *      $('#example').dataTable( {
+	 *      $('#videocean').dataTable( {
 	 *          "sDom": 'Rlfrtip',
 	 *          "oColReorder": {
 	 *              "fnReorderCallback": function () {
@@ -1262,11 +1262,11 @@ ColReorder.defaults = {
 	 *          }
 	 *      } );
 	 *
-	 *  @example
+	 *  @videocean
 	 *      // Using `new` constructor
-	 *      $('#example').dataTable()
+	 *      $('#videocean').dataTable()
 	 *
-	 *      new $.fn.dataTable.ColReorder( '#example', {
+	 *      new $.fn.dataTable.ColReorder( '#videocean', {
 	 *          "fnReorderCallback": function () {
 	 *              alert( 'Columns reordered' );
 	 *          }

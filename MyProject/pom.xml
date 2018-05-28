@@ -102,21 +102,21 @@
 		
 	</dependencies>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<!-- added config for upload -->
-				<configuration>
-                        <warSourceDirectory>src/main/webapp</warSourceDirectory>
-                        <warName>Spring4MVCFileUploadMultipartConfigElementExample</warName>
-                        <failOnMissingWebXml>false</failOnMissingWebXml>
-                    </configuration>
-				<!-- added config for upload -->
-			</plugin>
-		</plugins>
-	</build>
+	<!--<build>-->
+		<!--<plugins>-->
+			<!--<plugin>-->
+				<!--<groupId>org.springframework.boot</groupId>-->
+				<!--<artifactId>spring-boot-maven-plugin</artifactId>-->
+				<!--&lt;!&ndash; added config for upload &ndash;&gt;-->
+				<!--<configuration>-->
+                        <!--<warSourceDirectory>src/main/webapp</warSourceDirectory>-->
+                        <!--<warName>Spring4MVCFileUploadMultipartConfigElementExample</warName>-->
+                        <!--<failOnMissingWebXml>false</failOnMissingWebXml>-->
+                    <!--</configuration>-->
+				<!--&lt;!&ndash; added config for upload &ndash;&gt;-->
+			<!--</plugin>-->
+		<!--</plugins>-->
+	<!--</build>-->
 <repositories>
         <repository>
             <id>spring-releases</id>

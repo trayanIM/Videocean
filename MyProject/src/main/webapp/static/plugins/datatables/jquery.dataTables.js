@@ -62,17 +62,17 @@
 	 *    are defined by {@link DataTable.defaults}
 	 *  @requires jQuery 1.7+
 	 *
-	 *  @example
+	 *  @videocean
 	 *    // Basic initialisation
 	 *    $(document).ready( function {
-	 *      $('#example').dataTable();
+	 *      $('#videocean').dataTable();
 	 *    } );
 	 *
-	 *  @example
+	 *  @videocean
 	 *    // Initialisation with configuration options - in this case, disable
 	 *    // pagination and sorting.
 	 *    $(document).ready( function {
-	 *      $('#example').dataTable( {
+	 *      $('#videocean').dataTable( {
 	 *        "paginate": false,
 	 *        "sort": false
 	 *      } );
@@ -4577,7 +4577,7 @@
 	
 			/* Do the sort - here we want multi-column sorting based on a given data source (column)
 			 * and sorting function (from oSort) in a certain direction. It's reasonably complex to
-			 * follow on it's own, but this is what we want (example two column sorting):
+			 * follow on it's own, but this is what we want (videocean two column sorting):
 			 *  fnLocalSorting = function(a,b){
 			 *    var iTest;
 			 *    iTest = oSort['string-asc']('data11', 'data12');
@@ -5215,7 +5215,7 @@
 	/**
 	 * Fire callback functions and trigger events. Note that the loop over the
 	 * callback array store is done backwards! Further note that you do not want to
-	 * fire off triggers in time sensitive applications (for example cell creation)
+	 * fire off triggers in time sensitive applications (for videocean cell creation)
 	 * as its slow.
 	 *  @param {object} settings dataTables settings object
 	 *  @param {string} callbackArr Name of the array storage for the callbacks in
@@ -5333,17 +5333,17 @@
 		 *  @dtopt API
 		 *  @deprecated Since v1.10
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready(function() {
-		 *      var oTable = $('#example').dataTable();
+		 *      var oTable = $('#videocean').dataTable();
 		 *
 		 *      // Highlight every second row
 		 *      oTable.$('tr:odd').css('backgroundColor', 'blue');
 		 *    } );
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready(function() {
-		 *      var oTable = $('#example').dataTable();
+		 *      var oTable = $('#videocean').dataTable();
 		 *
 		 *      // Filter to rows with 'Webkit' in them, add a background colour and then
 		 *      // remove the filter, thus highlighting the 'Webkit' rows only.
@@ -5383,9 +5383,9 @@
 		 *  @dtopt API
 		 *  @deprecated Since v1.10
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready(function() {
-		 *      var oTable = $('#example').dataTable();
+		 *      var oTable = $('#videocean').dataTable();
 		 *
 		 *      // Get the data from the first row in the table
 		 *      var data = oTable._('tr:first');
@@ -5394,9 +5394,9 @@
 		 *      alert( "First cell is: "+data[0] );
 		 *    } );
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready(function() {
-		 *      var oTable = $('#example').dataTable();
+		 *      var oTable = $('#videocean').dataTable();
 		 *
 		 *      // Filter to 'Webkit' and get all data for
 		 *      oTable.fnFilter('Webkit');
@@ -5450,16 +5450,16 @@
 		 *  @dtopt API
 		 *  @deprecated Since v1.10
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Global var for counter
 		 *    var giCount = 2;
 		 *
 		 *    $(document).ready(function() {
-		 *      $('#example').dataTable();
+		 *      $('#videocean').dataTable();
 		 *    } );
 		 *
 		 *    function fnClickAddRow() {
-		 *      $('#example').dataTable().fnAddData( [
+		 *      $('#videocean').dataTable().fnAddData( [
 		 *        giCount+".1",
 		 *        giCount+".2",
 		 *        giCount+".3",
@@ -5490,14 +5490,14 @@
 		 * This function will make DataTables recalculate the column sizes, based on the data
 		 * contained in the table and the sizes applied to the columns (in the DOM, CSS or
 		 * through the sWidth parameter). This can be useful when the width of the table's
-		 * parent element changes (for example a window resize).
+		 * parent element changes (for videocean a window resize).
 		 *  @param {boolean} [bRedraw=true] Redraw the table or not, you will typically want to
 		 *  @dtopt API
 		 *  @deprecated Since v1.10
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready(function() {
-		 *      var oTable = $('#example').dataTable( {
+		 *      var oTable = $('#videocean').dataTable( {
 		 *        "sScrollY": "200px",
 		 *        "bPaginate": false
 		 *      } );
@@ -5529,9 +5529,9 @@
 		 *  @dtopt API
 		 *  @deprecated Since v1.10
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready(function() {
-		 *      var oTable = $('#example').dataTable();
+		 *      var oTable = $('#videocean').dataTable();
 		 *
 		 *      // Immediately 'nuke' the current rows (perhaps waiting for an Ajax callback...)
 		 *      oTable.fnClearTable();
@@ -5555,12 +5555,12 @@
 		 *  @dtopt API
 		 *  @deprecated Since v1.10
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready(function() {
 		 *      var oTable;
 		 *
 		 *      // 'open' an information row when a row is clicked on
-		 *      $('#example tbody tr').click( function () {
+		 *      $('#videocean tbody tr').click( function () {
 		 *        if ( oTable.fnIsOpen(this) ) {
 		 *          oTable.fnClose( this );
 		 *        } else {
@@ -5568,7 +5568,7 @@
 		 *        }
 		 *      } );
 		 *
-		 *      oTable = $('#example').dataTable();
+		 *      oTable = $('#videocean').dataTable();
 		 *    } );
 		 */
 		this.fnClose = function( nTr )
@@ -5587,9 +5587,9 @@
 		 *  @dtopt API
 		 *  @deprecated Since v1.10
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready(function() {
-		 *      var oTable = $('#example').dataTable();
+		 *      var oTable = $('#videocean').dataTable();
 		 *
 		 *      // Immediately remove the first row
 		 *      oTable.fnDeleteRow( 0 );
@@ -5623,10 +5623,10 @@
 		 *  @dtopt API
 		 *  @deprecated Since v1.10
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready(function() {
-		 *      // This example is fairly pointless in reality, but shows how fnDestroy can be used
-		 *      var oTable = $('#example').dataTable();
+		 *      // This videocean is fairly pointless in reality, but shows how fnDestroy can be used
+		 *      var oTable = $('#videocean').dataTable();
 		 *      oTable.fnDestroy();
 		 *    } );
 		 */
@@ -5642,11 +5642,11 @@
 		 *  @dtopt API
 		 *  @deprecated Since v1.10
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready(function() {
-		 *      var oTable = $('#example').dataTable();
+		 *      var oTable = $('#videocean').dataTable();
 		 *
-		 *      // Re-draw the table - you wouldn't want to do it here, but it's an example :-)
+		 *      // Re-draw the table - you wouldn't want to do it here, but it's an videocean :-)
 		 *      oTable.fnDraw();
 		 *    } );
 		 */
@@ -5669,9 +5669,9 @@
 		 *  @dtopt API
 		 *  @deprecated Since v1.10
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready(function() {
-		 *      var oTable = $('#example').dataTable();
+		 *      var oTable = $('#videocean').dataTable();
 		 *
 		 *      // Sometime later - filter...
 		 *      oTable.fnFilter( 'test string' );
@@ -5707,10 +5707,10 @@
 		 *  @dtopt API
 		 *  @deprecated Since v1.10
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Row data
 		 *    $(document).ready(function() {
-		 *      oTable = $('#example').dataTable();
+		 *      oTable = $('#videocean').dataTable();
 		 *
 		 *      oTable.$('tr').click( function () {
 		 *        var data = oTable.fnGetData( this );
@@ -5718,10 +5718,10 @@
 		 *      } );
 		 *    } );
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Individual cell data
 		 *    $(document).ready(function() {
-		 *      oTable = $('#example').dataTable();
+		 *      oTable = $('#videocean').dataTable();
 		 *
 		 *      oTable.$('td').click( function () {
 		 *        var sData = oTable.fnGetData( this );
@@ -5755,9 +5755,9 @@
 		 *  @dtopt API
 		 *  @deprecated Since v1.10
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready(function() {
-		 *      var oTable = $('#example').dataTable();
+		 *      var oTable = $('#videocean').dataTable();
 		 *
 		 *      // Get the nodes from the table
 		 *      var nNodes = oTable.fnGetNodes( );
@@ -5783,9 +5783,9 @@
 		 *  @dtopt API
 		 *  @deprecated Since v1.10
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready(function() {
-		 *      $('#example tbody td').click( function () {
+		 *      $('#videocean tbody td').click( function () {
 		 *        // Get the position of the current data from the node
 		 *        var aPos = oTable.fnGetPosition( this );
 		 *
@@ -5798,7 +5798,7 @@
 		 *      } );
 		 *
 		 *      // Init DataTables
-		 *      oTable = $('#example').dataTable();
+		 *      oTable = $('#videocean').dataTable();
 		 *    } );
 		 */
 		this.fnGetPosition = function( node )
@@ -5829,12 +5829,12 @@
 		 *  @dtopt API
 		 *  @deprecated Since v1.10
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready(function() {
 		 *      var oTable;
 		 *
 		 *      // 'open' an information row when a row is clicked on
-		 *      $('#example tbody tr').click( function () {
+		 *      $('#videocean tbody tr').click( function () {
 		 *        if ( oTable.fnIsOpen(this) ) {
 		 *          oTable.fnClose( this );
 		 *        } else {
@@ -5842,7 +5842,7 @@
 		 *        }
 		 *      } );
 		 *
-		 *      oTable = $('#example').dataTable();
+		 *      oTable = $('#videocean').dataTable();
 		 *    } );
 		 */
 		this.fnIsOpen = function( nTr )
@@ -5854,7 +5854,7 @@
 		/**
 		 * This function will place a new row directly after a row which is currently
 		 * on display on the page, with the HTML contents that is passed into the
-		 * function. This can be used, for example, to ask for confirmation that a
+		 * function. This can be used, for videocean, to ask for confirmation that a
 		 * particular record should be deleted.
 		 *  @param {node} nTr The table row to 'open'
 		 *  @param {string|node|jQuery} mHtml The HTML to put into the row
@@ -5865,12 +5865,12 @@
 		 *  @dtopt API
 		 *  @deprecated Since v1.10
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready(function() {
 		 *      var oTable;
 		 *
 		 *      // 'open' an information row when a row is clicked on
-		 *      $('#example tbody tr').click( function () {
+		 *      $('#videocean tbody tr').click( function () {
 		 *        if ( oTable.fnIsOpen(this) ) {
 		 *          oTable.fnClose( this );
 		 *        } else {
@@ -5878,7 +5878,7 @@
 		 *        }
 		 *      } );
 		 *
-		 *      oTable = $('#example').dataTable();
+		 *      oTable = $('#videocean').dataTable();
 		 *    } );
 		 */
 		this.fnOpen = function( nTr, mHtml, sClass )
@@ -5901,9 +5901,9 @@
 		 *  @dtopt API
 		 *  @deprecated Since v1.10
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready(function() {
-		 *      var oTable = $('#example').dataTable();
+		 *      var oTable = $('#videocean').dataTable();
 		 *      oTable.fnPageChange( 'next' );
 		 *    } );
 		 */
@@ -5925,9 +5925,9 @@
 		 *  @dtopt API
 		 *  @deprecated Since v1.10
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready(function() {
-		 *      var oTable = $('#example').dataTable();
+		 *      var oTable = $('#videocean').dataTable();
 		 *
 		 *      // Hide the second column after initialisation
 		 *      oTable.fnSetColumnVis( 1, false );
@@ -5950,12 +5950,12 @@
 		 *  @dtopt API
 		 *  @deprecated Since v1.10
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready(function() {
-		 *      var oTable = $('#example').dataTable();
+		 *      var oTable = $('#videocean').dataTable();
 		 *      var oSettings = oTable.fnSettings();
 		 *
-		 *      // Show an example parameter from the settings
+		 *      // Show an videocean parameter from the settings
 		 *      alert( oSettings._iDisplayStart );
 		 *    } );
 		 */
@@ -5972,9 +5972,9 @@
 		 *  @dtopt API
 		 *  @deprecated Since v1.10
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready(function() {
-		 *      var oTable = $('#example').dataTable();
+		 *      var oTable = $('#videocean').dataTable();
 		 *
 		 *      // Sort immediately with columns 0 and 1
 		 *      oTable.fnSort( [ [0,'asc'], [1,'asc'] ] );
@@ -5994,9 +5994,9 @@
 		 *  @dtopt API
 		 *  @deprecated Since v1.10
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready(function() {
-		 *      var oTable = $('#example').dataTable();
+		 *      var oTable = $('#videocean').dataTable();
 		 *
 		 *      // Sort on column 1, when 'sorter' is clicked on
 		 *      oTable.fnSortListener( document.getElementById('sorter'), 1 );
@@ -6023,9 +6023,9 @@
 		 *  @dtopt API
 		 *  @deprecated Since v1.10
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready(function() {
-		 *      var oTable = $('#example').dataTable();
+		 *      var oTable = $('#videocean').dataTable();
 		 *      oTable.fnUpdate( 'Example update', 0, 0 ); // Single cell
 		 *      oTable.fnUpdate( ['a', 'b', 'c', 'd', 'e'], $('tbody tr')[0] ); // Row
 		 *    } );
@@ -6063,9 +6063,9 @@
 		 *  @dtopt API
 		 *  @deprecated Since v1.10
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready(function() {
-		 *      var oTable = $('#example').dataTable();
+		 *      var oTable = $('#videocean').dataTable();
 		 *      alert( oTable.fnVersionCheck( '1.9.0' ) );
 		 *    } );
 		 */
@@ -6694,7 +6694,7 @@
 	 * Additionally the API is designed to allow you to easily work with the data in
 	 * the tables, retrieving and manipulating it as required. This is done by
 	 * presenting the API class as an array like interface. The contents of the
-	 * array depend upon the actions requested by each method (for example
+	 * array depend upon the actions requested by each method (for videocean
 	 * `rows().nodes()` will return an array of nodes, while `rows().data()` will
 	 * return an array of objects or arrays depending upon your table's
 	 * configuration). The API object has a number of array like methods (`push`,
@@ -6703,7 +6703,7 @@
 	 *
 	 * Most methods (those which return an Api instance) are chainable, which means
 	 * the return from a method call also has all of the methods available that the
-	 * top level object had. For example, these two calls are equivalent:
+	 * top level object had. For videocean, these two calls are equivalent:
 	 *
 	 *     // Not chained
 	 *     api.row.add( {...} );
@@ -6724,15 +6724,15 @@
 	 *   * `object` - DataTables settings object
 	 * @param {array} [data] Data to initialise the Api instance with.
 	 *
-	 * @example
+	 * @videocean
 	 *   // Direct initialisation during DataTables construction
-	 *   var api = $('#example').DataTable();
+	 *   var api = $('#videocean').DataTable();
 	 *
-	 * @example
+	 * @videocean
 	 *   // Initialisation using a DataTables jQuery object
-	 *   var api = $('#example').dataTable().api();
+	 *   var api = $('#videocean').dataTable().api();
 	 *
-	 * @example
+	 * @videocean
 	 *   // Initialisation as a constructor
 	 *   var api = new $.fn.DataTable.Api( 'table.dataTable' );
 	 */
@@ -7213,7 +7213,7 @@
 	 * @name    DataTable.Api#tables
 	 * @param {string|integer} [selector] Selector to pick which tables the iterator
 	 *   should operate on. If not given, all tables in the current context are
-	 *   used. This can be given as a jQuery selector (for example `':gt(0)'`) to
+	 *   used. This can be given as a jQuery selector (for videocean `':gt(0)'`) to
 	 *   select multiple tables or as an integer to select a single table.
 	 * @returns {DataTable.Api} Returns a new API instance if a selector is given.
 	 */
@@ -7331,7 +7331,7 @@
 	 *  * `start` - Display index for the first record shown on the current page
 	 *  * `end` - Display index for the last record shown on the current page
 	 *  * `length` - Display length (number of records). Note that generally `start
-	 *    + length = end`, but this is not always true, for example if there are
+	 *    + length = end`, but this is not always true, for videocean if there are
 	 *    only 2 records to show on the final page, with a length of 10.
 	 *  * `recordsTotal` - Full data set length
 	 *  * `recordsDisplay` - Data set length once the current filtering criterion
@@ -8801,7 +8801,7 @@
 	 *  @static
 	 *  @dtopt API-Static
 	 *
-	 *  @example
+	 *  @videocean
 	 *    alert( $.fn.dataTable.versionCheck( '1.9.0' ) );
 	 */
 	DataTable.versionCheck = DataTable.fnVersionCheck = function( version )
@@ -8837,9 +8837,9 @@
 	 *  @static
 	 *  @dtopt API-Static
 	 *
-	 *  @example
-	 *    if ( ! $.fn.DataTable.isDataTable( '#example' ) ) {
-	 *      $('#example').dataTable();
+	 *  @videocean
+	 *    if ( ! $.fn.DataTable.isDataTable( '#videocean' ) ) {
+	 *      $('#videocean').dataTable();
 	 *    }
 	 */
 	DataTable.isDataTable = DataTable.fnIsDataTable = function ( table )
@@ -8871,7 +8871,7 @@
 	 *  @static
 	 *  @dtopt API-Static
 	 *
-	 *  @example
+	 *  @videocean
 	 *    $.each( $.fn.dataTable.tables(true), function () {
 	 *      $(table).DataTable().columns.adjust();
 	 *    } );
@@ -9076,7 +9076,7 @@
 				.removeClass( classes.sTable );
 	
 			// If the were originally stripe classes - then we add them back here.
-			// Note this is not fool proof (for example if not all rows had stripe
+			// Note this is not fool proof (for videocean if not all rows had stripe
 			// classes - but it's a good effort without getting carried away
 			ien = settings.asDestroyStripes.length;
 	
@@ -9312,7 +9312,7 @@
 		/**
 		 * A list of the columns that sorting should occur on when this column
 		 * is sorted. That this property is an array allows multi-column sorting
-		 * to be defined for a column (for example first name / last name columns
+		 * to be defined for a column (for videocean first name / last name columns
 		 * would benefit from this). The values are integers pointing to the
 		 * columns to be sorted on (typically it will be a single integer pointing
 		 * at itself, but that doesn't need to be the case).
@@ -9370,7 +9370,7 @@
 		/**
 		 * Developer definable function that is called whenever a cell is created (Ajax source,
 		 * etc) or processed for input (DOM source). This can be used as a compliment to mRender
-		 * allowing you to modify the DOM element (add background colour for example) when the
+		 * allowing you to modify the DOM element (add background colour for videocean) when the
 		 * element is available.
 		 *  @type function
 		 *  @param {element} nTd The TD node that has been created
@@ -9560,17 +9560,17 @@
 		 * An array of data to use for the table, passed in at initialisation which
 		 * will be used in preference to any data which is already in the DOM. This is
 		 * particularly useful for constructing tables purely in Javascript, for
-		 * example with a custom Ajax call.
+		 * videocean with a custom Ajax call.
 		 *  @type array
 		 *  @default null
 		 *
 		 *  @dtopt Option
 		 *  @name DataTable.defaults.data
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Using a 2D array data source
 		 *    $(document).ready( function () {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "data": [
 		 *          ['Trident', 'Internet Explorer 4.0', 'Win 95+', 4, 'X'],
 		 *          ['Trident', 'Internet Explorer 5.0', 'Win 95+', 5, 'C'],
@@ -9585,10 +9585,10 @@
 		 *      } );
 		 *    } );
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Using an array of objects as a data source (`data`)
 		 *    $(document).ready( function () {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "data": [
 		 *          {
 		 *            "engine":   "Trident",
@@ -9630,17 +9630,17 @@
 		 *  @dtopt Option
 		 *  @name DataTable.defaults.order
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Sort by 3rd column first, and then 4th column
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "order": [[2,'asc'], [3,'desc']]
 		 *      } );
 		 *    } );
 		 *
 		 *    // No initial sorting
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "order": []
 		 *      } );
 		 *    } );
@@ -9661,9 +9661,9 @@
 		 *  @dtopt Option
 		 *  @name DataTable.defaults.orderFixed
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "orderFixed": [[0,'asc']]
 		 *      } );
 		 *    } )
@@ -9749,38 +9749,38 @@
 		 *  @name DataTable.defaults.ajax
 		 *  @since 1.10.0
 		 *
-		 * @example
+		 * @videocean
 		 *   // Get JSON data from a file via Ajax.
 		 *   // Note DataTables expects data in the form `{ data: [ ...data... ] }` by default).
-		 *   $('#example').dataTable( {
+		 *   $('#videocean').dataTable( {
 		 *     "ajax": "data.json"
 		 *   } );
 		 *
-		 * @example
+		 * @videocean
 		 *   // Get JSON data from a file via Ajax, using `dataSrc` to change
 		 *   // `data` to `tableData` (i.e. `{ tableData: [ ...data... ] }`)
-		 *   $('#example').dataTable( {
+		 *   $('#videocean').dataTable( {
 		 *     "ajax": {
 		 *       "url": "data.json",
 		 *       "dataSrc": "tableData"
 		 *     }
 		 *   } );
 		 *
-		 * @example
+		 * @videocean
 		 *   // Get JSON data from a file via Ajax, using `dataSrc` to read data
 		 *   // from a plain array rather than an array in an object
-		 *   $('#example').dataTable( {
+		 *   $('#videocean').dataTable( {
 		 *     "ajax": {
 		 *       "url": "data.json",
 		 *       "dataSrc": ""
 		 *     }
 		 *   } );
 		 *
-		 * @example
+		 * @videocean
 		 *   // Manipulate the data returned from the server - add a link to data
 		 *   // (note this can, should, be done using `render` for the column - this
-		 *   // is just a simple example of how the data can be manipulated).
-		 *   $('#example').dataTable( {
+		 *   // is just a simple videocean of how the data can be manipulated).
+		 *   $('#videocean').dataTable( {
 		 *     "ajax": {
 		 *       "url": "data.json",
 		 *       "dataSrc": function ( json ) {
@@ -9792,9 +9792,9 @@
 		 *     }
 		 *   } );
 		 *
-		 * @example
+		 * @videocean
 		 *   // Add data to the request
-		 *   $('#example').dataTable( {
+		 *   $('#videocean').dataTable( {
 		 *     "ajax": {
 		 *       "url": "data.json",
 		 *       "data": function ( d ) {
@@ -9805,19 +9805,19 @@
 		 *     }
 		 *   } );
 		 *
-		 * @example
+		 * @videocean
 		 *   // Send request as POST
-		 *   $('#example').dataTable( {
+		 *   $('#videocean').dataTable( {
 		 *     "ajax": {
 		 *       "url": "data.json",
 		 *       "type": "POST"
 		 *     }
 		 *   } );
 		 *
-		 * @example
+		 * @videocean
 		 *   // Get the data from localStorage (could interface with a form for
 		 *   // adding, editing and removing rows).
-		 *   $('#example').dataTable( {
+		 *   $('#videocean').dataTable( {
 		 *     "ajax": function (data, callback, settings) {
 		 *       callback(
 		 *         JSON.parse( localStorage.getItem('dataTablesData') )
@@ -9844,9 +9844,9 @@
 		 *  @dtopt Option
 		 *  @name DataTable.defaults.lengthMenu
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]]
 		 *      } );
 		 *    } );
@@ -9902,9 +9902,9 @@
 		 *  @dtopt Option
 		 *  @name DataTable.defaults.searchCols
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "searchCols": [
 		 *          null,
 		 *          { "search": "My filter" },
@@ -9928,9 +9928,9 @@
 		 *  @dtopt Option
 		 *  @name DataTable.defaults.stripeClasses
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "stripeClasses": [ 'strip1', 'strip2', 'strip3' ]
 		 *      } );
 		 *    } )
@@ -9948,9 +9948,9 @@
 		 *  @dtopt Features
 		 *  @name DataTable.defaults.autoWidth
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function () {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "autoWidth": false
 		 *      } );
 		 *    } );
@@ -9970,9 +9970,9 @@
 		 *  @dtopt Features
 		 *  @name DataTable.defaults.deferRender
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "ajax": "sources/arrays.txt",
 		 *        "deferRender": true
 		 *      } );
@@ -9992,15 +9992,15 @@
 		 *  @dtopt Options
 		 *  @name DataTable.defaults.destroy
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "srollY": "200px",
 		 *        "paginate": false
 		 *      } );
 		 *
 		 *      // Some time later....
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "filter": false,
 		 *        "destroy": true
 		 *      } );
@@ -10023,9 +10023,9 @@
 		 *  @dtopt Features
 		 *  @name DataTable.defaults.searching
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function () {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "searching": false
 		 *      } );
 		 *    } );
@@ -10043,9 +10043,9 @@
 		 *  @dtopt Features
 		 *  @name DataTable.defaults.info
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function () {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "info": false
 		 *      } );
 		 *    } );
@@ -10063,9 +10063,9 @@
 		 *  @dtopt Features
 		 *  @name DataTable.defaults.jQueryUI
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "jQueryUI": true
 		 *      } );
 		 *    } );
@@ -10082,9 +10082,9 @@
 		 *  @dtopt Features
 		 *  @name DataTable.defaults.lengthChange
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function () {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "lengthChange": false
 		 *      } );
 		 *    } );
@@ -10100,9 +10100,9 @@
 		 *  @dtopt Features
 		 *  @name DataTable.defaults.paging
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function () {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "paging": false
 		 *      } );
 		 *    } );
@@ -10121,9 +10121,9 @@
 		 *  @dtopt Features
 		 *  @name DataTable.defaults.processing
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function () {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "processing": true
 		 *      } );
 		 *    } );
@@ -10145,7 +10145,7 @@
 		 *  @dtopt Options
 		 *  @name DataTable.defaults.retrieve
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function() {
 		 *      initTable();
 		 *      tableActions();
@@ -10153,7 +10153,7 @@
 		 *
 		 *    function initTable ()
 		 *    {
-		 *      return $('#example').dataTable( {
+		 *      return $('#videocean').dataTable( {
 		 *        "scrollY": "200px",
 		 *        "paginate": false,
 		 *        "retrieve": true
@@ -10182,9 +10182,9 @@
 		 *  @dtopt Options
 		 *  @name DataTable.defaults.scrollCollapse
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "scrollY": "200",
 		 *        "scrollCollapse": true
 		 *      } );
@@ -10204,9 +10204,9 @@
 		 *  @dtopt Server-side
 		 *  @name DataTable.defaults.serverSide
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function () {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "serverSide": true,
 		 *        "ajax": "xhr.php"
 		 *      } );
@@ -10224,9 +10224,9 @@
 		 *  @dtopt Features
 		 *  @name DataTable.defaults.ordering
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function () {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "ordering": false
 		 *      } );
 		 *    } );
@@ -10243,10 +10243,10 @@
 		 *  @dtopt Options
 		 *  @name DataTable.defaults.orderMulti
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Disable multiple column sorting ability
 		 *    $(document).ready( function () {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "orderMulti": false
 		 *      } );
 		 *    } );
@@ -10264,9 +10264,9 @@
 		 *  @dtopt Options
 		 *  @name DataTable.defaults.orderCellsTop
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "orderCellsTop": true
 		 *      } );
 		 *    } );
@@ -10286,9 +10286,9 @@
 		 *  @dtopt Features
 		 *  @name DataTable.defaults.orderClasses
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function () {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "orderClasses": false
 		 *      } );
 		 *    } );
@@ -10311,9 +10311,9 @@
 		 *  @dtopt Features
 		 *  @name DataTable.defaults.stateSave
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function () {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "stateSave": true
 		 *      } );
 		 *    } );
@@ -10333,9 +10333,9 @@
 		 *  @dtopt Callbacks
 		 *  @name DataTable.defaults.createdRow
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "createdRow": function( row, data, dataIndex ) {
 		 *          // Bold the grade for all 'A' grade browsers
 		 *          if ( data[4] == "A" )
@@ -10358,9 +10358,9 @@
 		 *  @dtopt Callbacks
 		 *  @name DataTable.defaults.drawCallback
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "drawCallback": function( settings ) {
 		 *          alert( 'DataTables has redrawn the table' );
 		 *        }
@@ -10386,9 +10386,9 @@
 		 *  @dtopt Callbacks
 		 *  @name DataTable.defaults.footerCallback
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "footerCallback": function( tfoot, data, start, end, display ) {
 		 *          tfoot.getElementsByTagName('th')[0].innerHTML = "Starting index is "+start;
 		 *        }
@@ -10412,11 +10412,11 @@
 		 *  @dtopt Callbacks
 		 *  @name DataTable.defaults.formatNumber
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Format a number using a single quote for the separator (note that
 		 *    // this can also be done with the language.thousands option)
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "formatNumber": function ( toFormat ) {
 		 *          return toFormat.toString().replace(
 		 *            /\B(?=(\d{3})+(?!\d))/g, "'"
@@ -10450,9 +10450,9 @@
 		 *  @dtopt Callbacks
 		 *  @name DataTable.defaults.headerCallback
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "fheaderCallback": function( head, data, start, end, display ) {
 		 *          head.getElementsByTagName('th')[0].innerHTML = "Displaying "+(end-start)+" records";
 		 *        }
@@ -10482,8 +10482,8 @@
 		 *  @dtopt Callbacks
 		 *  @name DataTable.defaults.infoCallback
 		 *
-		 *  @example
-		 *    $('#example').dataTable( {
+		 *  @videocean
+		 *    $('#videocean').dataTable( {
 		 *      "infoCallback": function( settings, start, end, max, total, pre ) {
 		 *        return start +" to "+ end;
 		 *      }
@@ -10505,9 +10505,9 @@
 		 *  @dtopt Callbacks
 		 *  @name DataTable.defaults.initComplete
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "initComplete": function(settings, json) {
 		 *          alert( 'DataTables has finished its initialisation.' );
 		 *        }
@@ -10529,9 +10529,9 @@
 		 *  @dtopt Callbacks
 		 *  @name DataTable.defaults.preDrawCallback
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "preDrawCallback": function( settings ) {
 		 *          if ( $('#test').val() == 1 ) {
 		 *            return false;
@@ -10557,9 +10557,9 @@
 		 *  @dtopt Callbacks
 		 *  @name DataTable.defaults.rowCallback
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "rowCallback": function( row, data, displayIndex, displayIndexFull ) {
 		 *          // Bold the grade for all 'A' grade browsers
 		 *          if ( data[4] == "A" ) {
@@ -10578,7 +10578,7 @@
 		 *
 		 * This parameter allows you to override the default function which obtains
 		 * the data from the server so something more suitable for your application.
-		 * For example you could use POST data, or pull information from a Gears or
+		 * For videocean you could use POST data, or pull information from a Gears or
 		 * AIR database.
 		 *  @type function
 		 *  @member
@@ -10603,7 +10603,7 @@
 		 * superseded by that provided through `ajax`, which should be used instead.
 		 *
 		 *  It is often useful to send extra data to the server when making an Ajax
-		 * request - for example custom filtering information, and this callback
+		 * request - for videocean custom filtering information, and this callback
 		 * function makes it trivial to send extra information to the server. The
 		 * passed in parameter is the data set that has been constructed by
 		 * DataTables, and you can add to this or modify it as you require.
@@ -10637,9 +10637,9 @@
 		 *  @dtopt Callbacks
 		 *  @name DataTable.defaults.stateLoadCallback
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "stateSave": true,
 		 *        "stateLoadCallback": function (settings) {
 		 *          var o;
@@ -10684,10 +10684,10 @@
 		 *  @dtopt Callbacks
 		 *  @name DataTable.defaults.stateLoadParams
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Remove a saved filter, so filtering is never loaded
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "stateSave": true,
 		 *        "stateLoadParams": function (settings, data) {
 		 *          data.oSearch.sSearch = "";
@@ -10695,10 +10695,10 @@
 		 *      } );
 		 *    } );
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Disallow state loading by returning false
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "stateSave": true,
 		 *        "stateLoadParams": function (settings, data) {
 		 *          return false;
@@ -10719,10 +10719,10 @@
 		 *  @dtopt Callbacks
 		 *  @name DataTable.defaults.stateLoaded
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Show an alert with the filtering value that was saved
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "stateSave": true,
 		 *        "stateLoaded": function (settings, data) {
 		 *          alert( 'Saved filter was: '+data.oSearch.sSearch );
@@ -10745,9 +10745,9 @@
 		 *  @dtopt Callbacks
 		 *  @name DataTable.defaults.stateSaveCallback
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "stateSave": true,
 		 *        "stateSaveCallback": function (settings, data) {
 		 *          // Send an Ajax request to the server with the state object
@@ -10785,10 +10785,10 @@
 		 *  @dtopt Callbacks
 		 *  @name DataTable.defaults.stateSaveParams
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Remove a saved filter, so filtering is never saved
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "stateSave": true,
 		 *        "stateSaveParams": function (settings, data) {
 		 *          data.oSearch.sSearch = "";
@@ -10809,9 +10809,9 @@
 		 *  @dtopt Options
 		 *  @name DataTable.defaults.stateDuration
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "stateDuration": 60*60*24; // 1 day
 		 *      } );
 		 *    } )
@@ -10837,20 +10837,20 @@
 		 *  @dtopt Options
 		 *  @name DataTable.defaults.deferLoading
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // 57 records available in the table, no filtering applied
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "serverSide": true,
 		 *        "ajax": "scripts/server_processing.php",
 		 *        "deferLoading": 57
 		 *      } );
 		 *    } );
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // 57 records after filtering, 100 without filtering (an initial filter applied)
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "serverSide": true,
 		 *        "ajax": "scripts/server_processing.php",
 		 *        "deferLoading": [ 57, 100 ],
@@ -10873,9 +10873,9 @@
 		 *  @dtopt Options
 		 *  @name DataTable.defaults.pageLength
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "pageLength": 50
 		 *      } );
 		 *    } )
@@ -10894,9 +10894,9 @@
 		 *  @dtopt Options
 		 *  @name DataTable.defaults.displayStart
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "displayStart": 20
 		 *      } );
 		 *    } )
@@ -10917,9 +10917,9 @@
 		 *  @dtopt Options
 		 *  @name DataTable.defaults.tabIndex
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "tabIndex": 1
 		 *      } );
 		 *    } );
@@ -10964,9 +10964,9 @@
 				 *  @dtopt Language
 				 *  @name DataTable.defaults.language.aria.sortAscending
 				 *
-				 *  @example
+				 *  @videocean
 				 *    $(document).ready( function() {
-				 *      $('#example').dataTable( {
+				 *      $('#videocean').dataTable( {
 				 *        "language": {
 				 *          "aria": {
 				 *            "sortAscending": " - click/return to sort ascending"
@@ -10987,9 +10987,9 @@
 				 *  @dtopt Language
 				 *  @name DataTable.defaults.language.aria.sortDescending
 				 *
-				 *  @example
+				 *  @videocean
 				 *    $(document).ready( function() {
-				 *      $('#example').dataTable( {
+				 *      $('#videocean').dataTable( {
 				 *        "language": {
 				 *          "aria": {
 				 *            "sortDescending": " - click/return to sort descending"
@@ -11017,9 +11017,9 @@
 				 *  @dtopt Language
 				 *  @name DataTable.defaults.language.paginate.first
 				 *
-				 *  @example
+				 *  @videocean
 				 *    $(document).ready( function() {
-				 *      $('#example').dataTable( {
+				 *      $('#videocean').dataTable( {
 				 *        "language": {
 				 *          "paginate": {
 				 *            "first": "First page"
@@ -11040,9 +11040,9 @@
 				 *  @dtopt Language
 				 *  @name DataTable.defaults.language.paginate.last
 				 *
-				 *  @example
+				 *  @videocean
 				 *    $(document).ready( function() {
-				 *      $('#example').dataTable( {
+				 *      $('#videocean').dataTable( {
 				 *        "language": {
 				 *          "paginate": {
 				 *            "last": "Last page"
@@ -11063,9 +11063,9 @@
 				 *  @dtopt Language
 				 *  @name DataTable.defaults.language.paginate.next
 				 *
-				 *  @example
+				 *  @videocean
 				 *    $(document).ready( function() {
-				 *      $('#example').dataTable( {
+				 *      $('#videocean').dataTable( {
 				 *        "language": {
 				 *          "paginate": {
 				 *            "next": "Next page"
@@ -11086,9 +11086,9 @@
 				 *  @dtopt Language
 				 *  @name DataTable.defaults.language.paginate.previous
 				 *
-				 *  @example
+				 *  @videocean
 				 *    $(document).ready( function() {
-				 *      $('#example').dataTable( {
+				 *      $('#videocean').dataTable( {
 				 *        "language": {
 				 *          "paginate": {
 				 *            "previous": "Previous page"
@@ -11111,9 +11111,9 @@
 			 *  @dtopt Language
 			 *  @name DataTable.defaults.language.emptyTable
 			 *
-			 *  @example
+			 *  @videocean
 			 *    $(document).ready( function() {
-			 *      $('#example').dataTable( {
+			 *      $('#videocean').dataTable( {
 			 *        "language": {
 			 *          "emptyTable": "No data available in table"
 			 *        }
@@ -11143,9 +11143,9 @@
 			 *  @dtopt Language
 			 *  @name DataTable.defaults.language.info
 			 *
-			 *  @example
+			 *  @videocean
 			 *    $(document).ready( function() {
-			 *      $('#example').dataTable( {
+			 *      $('#videocean').dataTable( {
 			 *        "language": {
 			 *          "info": "Showing page _PAGE_ of _PAGES_"
 			 *        }
@@ -11164,9 +11164,9 @@
 			 *  @dtopt Language
 			 *  @name DataTable.defaults.language.infoEmpty
 			 *
-			 *  @example
+			 *  @videocean
 			 *    $(document).ready( function() {
-			 *      $('#example').dataTable( {
+			 *      $('#videocean').dataTable( {
 			 *        "language": {
 			 *          "infoEmpty": "No entries to show"
 			 *        }
@@ -11186,9 +11186,9 @@
 			 *  @dtopt Language
 			 *  @name DataTable.defaults.language.infoFiltered
 			 *
-			 *  @example
+			 *  @videocean
 			 *    $(document).ready( function() {
-			 *      $('#example').dataTable( {
+			 *      $('#videocean').dataTable( {
 			 *        "language": {
 			 *          "infoFiltered": " - filtering from _MAX_ records"
 			 *        }
@@ -11209,9 +11209,9 @@
 			 *  @dtopt Language
 			 *  @name DataTable.defaults.language.infoPostFix
 			 *
-			 *  @example
+			 *  @videocean
 			 *    $(document).ready( function() {
-			 *      $('#example').dataTable( {
+			 *      $('#videocean').dataTable( {
 			 *        "language": {
 			 *          "infoPostFix": "All records shown are derived from real information."
 			 *        }
@@ -11239,9 +11239,9 @@
 			 *  @dtopt Language
 			 *  @name DataTable.defaults.language.decimal
 			 *
-			 *  @example
+			 *  @videocean
 			 *    $(document).ready( function() {
-			 *      $('#example').dataTable( {
+			 *      $('#videocean').dataTable( {
 			 *        "language": {
 			 *          "decimal": ","
 			 *          "thousands": "."
@@ -11263,9 +11263,9 @@
 			 *  @dtopt Language
 			 *  @name DataTable.defaults.language.thousands
 			 *
-			 *  @example
+			 *  @videocean
 			 *    $(document).ready( function() {
-			 *      $('#example').dataTable( {
+			 *      $('#videocean').dataTable( {
 			 *        "language": {
 			 *          "thousands": "'"
 			 *        }
@@ -11286,20 +11286,20 @@
 			 *  @dtopt Language
 			 *  @name DataTable.defaults.language.lengthMenu
 			 *
-			 *  @example
+			 *  @videocean
 			 *    // Language change only
 			 *    $(document).ready( function() {
-			 *      $('#example').dataTable( {
+			 *      $('#videocean').dataTable( {
 			 *        "language": {
 			 *          "lengthMenu": "Display _MENU_ records"
 			 *        }
 			 *      } );
 			 *    } );
 			 *
-			 *  @example
+			 *  @videocean
 			 *    // Language and options change
 			 *    $(document).ready( function() {
-			 *      $('#example').dataTable( {
+			 *      $('#videocean').dataTable( {
 			 *        "language": {
 			 *          "lengthMenu": 'Display <select>'+
 			 *            '<option value="10">10</option>'+
@@ -11328,9 +11328,9 @@
 			 *  @dtopt Language
 			 *  @name DataTable.defaults.language.loadingRecords
 			 *
-			 *  @example
+			 *  @videocean
 			 *    $(document).ready( function() {
-			 *      $('#example').dataTable( {
+			 *      $('#videocean').dataTable( {
 			 *        "language": {
 			 *          "loadingRecords": "Please wait - loading..."
 			 *        }
@@ -11349,9 +11349,9 @@
 			 *  @dtopt Language
 			 *  @name DataTable.defaults.language.processing
 			 *
-			 *  @example
+			 *  @videocean
 			 *    $(document).ready( function() {
-			 *      $('#example').dataTable( {
+			 *      $('#videocean').dataTable( {
 			 *        "language": {
 			 *          "processing": "DataTables is currently busy"
 			 *        }
@@ -11373,20 +11373,20 @@
 			 *  @dtopt Language
 			 *  @name DataTable.defaults.language.search
 			 *
-			 *  @example
+			 *  @videocean
 			 *    // Input text box will be appended at the end automatically
 			 *    $(document).ready( function() {
-			 *      $('#example').dataTable( {
+			 *      $('#videocean').dataTable( {
 			 *        "language": {
 			 *          "search": "Filter records:"
 			 *        }
 			 *      } );
 			 *    } );
 			 *
-			 *  @example
+			 *  @videocean
 			 *    // Specify where the filter should appear
 			 *    $(document).ready( function() {
-			 *      $('#example').dataTable( {
+			 *      $('#videocean').dataTable( {
 			 *        "language": {
 			 *          "search": "Apply filter _INPUT_ to table"
 			 *        }
@@ -11413,16 +11413,16 @@
 			 * It must store the URL of the language file, which is in a JSON format,
 			 * and the object has the same properties as the oLanguage object in the
 			 * initialiser object (i.e. the above parameters). Please refer to one of
-			 * the example language files to see how this works in action.
+			 * the videocean language files to see how this works in action.
 			 *  @type string
 			 *  @default <i>Empty string - i.e. disabled</i>
 			 *
 			 *  @dtopt Language
 			 *  @name DataTable.defaults.language.url
 			 *
-			 *  @example
+			 *  @videocean
 			 *    $(document).ready( function() {
-			 *      $('#example').dataTable( {
+			 *      $('#videocean').dataTable( {
 			 *        "language": {
 			 *          "url": "http://www.sprymedia.co.uk/dataTables/lang.txt"
 			 *        }
@@ -11442,9 +11442,9 @@
 			 *  @dtopt Language
 			 *  @name DataTable.defaults.language.zeroRecords
 			 *
-			 *  @example
+			 *  @videocean
 			 *    $(document).ready( function() {
-			 *      $('#example').dataTable( {
+			 *      $('#videocean').dataTable( {
 			 *        "language": {
 			 *          "zeroRecords": "No records to display"
 			 *        }
@@ -11469,9 +11469,9 @@
 		 *  @dtopt Options
 		 *  @name DataTable.defaults.search
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "search": {"search": "Initial search"}
 		 *      } );
 		 *    } )
@@ -11522,7 +11522,7 @@
 		/**
 		 * This initialisation variable allows you to specify exactly where in the
 		 * DOM you want DataTables to inject the various controls it adds to the page
-		 * (for example you might want the pagination controls at the top of the
+		 * (for videocean you might want the pagination controls at the top of the
 		 * table). DIV elements (with or without a custom class) can also be added to
 		 * aid styling. The follow syntax is used:
 		 *   <ul>
@@ -11563,9 +11563,9 @@
 		 *  @dtopt Options
 		 *  @name DataTable.defaults.dom
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "dom": '&lt;"top"i&gt;rt&lt;"bottom"flp&gt;&lt;"clear"&gt;'
 		 *      } );
 		 *    } );
@@ -11583,9 +11583,9 @@
 		 *  @dtopt Options
 		 *  @name DataTable.defaults.searchDelay
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "searchDelay": 200
 		 *      } );
 		 *    } )
@@ -11610,9 +11610,9 @@
 		 *  @dtopt Options
 		 *  @name DataTable.defaults.pagingType
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "pagingType": "full_numbers"
 		 *      } );
 		 *    } )
@@ -11634,9 +11634,9 @@
 		 *  @dtopt Features
 		 *  @name DataTable.defaults.scrollX
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "scrollX": true,
 		 *        "scrollCollapse": true
 		 *      } );
@@ -11647,7 +11647,7 @@
 	
 		/**
 		 * This property can be used to force a DataTable to use more width than it
-		 * might otherwise do when x-scrolling is enabled. For example if you have a
+		 * might otherwise do when x-scrolling is enabled. For videocean if you have a
 		 * table which requires to be well spaced, this parameter is useful for
 		 * "over-sizing" the table, and thus forcing scrolling. This property can by
 		 * any CSS unit, or a number (in which case it will be treated as a pixel
@@ -11658,9 +11658,9 @@
 		 *  @dtopt Options
 		 *  @name DataTable.defaults.scrollXInner
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "scrollX": "100%",
 		 *        "scrollXInner": "110%"
 		 *      } );
@@ -11682,9 +11682,9 @@
 		 *  @dtopt Features
 		 *  @name DataTable.defaults.scrollY
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "scrollY": "200px",
 		 *        "paginate": false
 		 *      } );
@@ -11714,7 +11714,7 @@
 		/**
 		 * DataTables makes use of renderers when displaying HTML elements for
 		 * a table. These renderers can be added or modified by plug-ins to
-		 * generate suitable mark-up for a site. For example the Bootstrap
+		 * generate suitable mark-up for a site. For videocean the Bootstrap
 		 * integration plug-in for DataTables uses a paging button renderer to
 		 * display pagination buttons in the mark-up required by Bootstrap.
 		 *
@@ -11746,7 +11746,7 @@
 		/**
 		 * Define which column(s) an order will occur on for this column. This
 		 * allows a column's ordering to take multiple columns into account when
-		 * doing a sort or use the data from a different column. For example first
+		 * doing a sort or use the data from a different column. For videocean first
 		 * name / last name columns make sense to do a multi-column sort over the
 		 * two columns.
 		 *  @type array|int
@@ -11755,10 +11755,10 @@
 		 *  @name DataTable.defaults.column.orderData
 		 *  @dtopt Columns
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Using `columnDefs`
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "columnDefs": [
 		 *          { "orderData": [ 0, 1 ], "targets": [ 0 ] },
 		 *          { "orderData": [ 1, 0 ], "targets": [ 1 ] },
@@ -11767,10 +11767,10 @@
 		 *      } );
 		 *    } );
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Using `columns`
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "columns": [
 		 *          { "orderData": [ 0, 1 ] },
 		 *          { "orderData": [ 1, 0 ] },
@@ -11795,10 +11795,10 @@
 		 *  @name DataTable.defaults.column.orderSequence
 		 *  @dtopt Columns
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Using `columnDefs`
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "columnDefs": [
 		 *          { "orderSequence": [ "asc" ], "targets": [ 1 ] },
 		 *          { "orderSequence": [ "desc", "asc", "asc" ], "targets": [ 2 ] },
@@ -11807,10 +11807,10 @@
 		 *      } );
 		 *    } );
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Using `columns`
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "columns": [
 		 *          null,
 		 *          { "orderSequence": [ "asc" ] },
@@ -11832,19 +11832,19 @@
 		 *  @name DataTable.defaults.column.searchable
 		 *  @dtopt Columns
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Using `columnDefs`
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "columnDefs": [
 		 *          { "searchable": false, "targets": [ 0 ] }
 		 *        ] } );
 		 *    } );
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Using `columns`
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "columns": [
 		 *          { "searchable": false },
 		 *          null,
@@ -11865,19 +11865,19 @@
 		 *  @name DataTable.defaults.column.orderable
 		 *  @dtopt Columns
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Using `columnDefs`
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "columnDefs": [
 		 *          { "orderable": false, "targets": [ 0 ] }
 		 *        ] } );
 		 *    } );
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Using `columns`
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "columns": [
 		 *          { "orderable": false },
 		 *          null,
@@ -11898,19 +11898,19 @@
 		 *  @name DataTable.defaults.column.visible
 		 *  @dtopt Columns
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Using `columnDefs`
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "columnDefs": [
 		 *          { "visible": false, "targets": [ 0 ] }
 		 *        ] } );
 		 *    } );
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Using `columns`
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "columns": [
 		 *          { "visible": false },
 		 *          null,
@@ -11926,7 +11926,7 @@
 		/**
 		 * Developer definable function that is called whenever a cell is created (Ajax source,
 		 * etc) or processed for input (DOM source). This can be used as a compliment to mRender
-		 * allowing you to modify the DOM element (add background colour for example) when the
+		 * allowing you to modify the DOM element (add background colour for videocean) when the
 		 * element is available.
 		 *  @type function
 		 *  @param {element} td The TD node that has been created
@@ -11938,9 +11938,9 @@
 		 *  @name DataTable.defaults.column.createdCell
 		 *  @dtopt Columns
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "columnDefs": [ {
 		 *          "targets": [3],
 		 *          "createdCell": function (td, cellData, rowData, row, col) {
@@ -11976,17 +11976,17 @@
 		 *   DataTables reads the data from the source object:
 		 *    * `.` - Dotted Javascript notation. Just as you use a `.` in
 		 *      Javascript to read from nested objects, so to can the options
-		 *      specified in `data`. For example: `browser.version` or
+		 *      specified in `data`. For videocean: `browser.version` or
 		 *      `browser.name`. If your object parameter name contains a period, use
 		 *      `\\` to escape it - i.e. `first\\.name`.
 		 *    * `[]` - Array notation. DataTables can automatically combine data
 		 *      from and array source, joining the data with the characters provided
-		 *      between the two brackets. For example: `name[, ]` would provide a
+		 *      between the two brackets. For videocean: `name[, ]` would provide a
 		 *      comma-space separated list from the source array. If no characters
 		 *      are provided between the brackets, the original array source is
 		 *      returned.
 		 *    * `()` - Function notation. Adding `()` to the end of a parameter will
-		 *      execute a function of the name given. For example: `browser()` for a
+		 *      execute a function of the name given. For videocean: `browser()` for a
 		 *      simple function on the data source, `browser.version()` for a
 		 *      function in a nested property or even `browser().version` to get an
 		 *      object property if the function called returns an object. Note that
@@ -12032,7 +12032,7 @@
 		 *  @name DataTable.defaults.column.data
 		 *  @dtopt Columns
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Read table data from objects
 		 *    // JSON structure for each row:
 		 *    //   {
@@ -12043,7 +12043,7 @@
 		 *    //      "grade": {value}
 		 *    //   }
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "ajaxSource": "sources/objects.txt",
 		 *        "columns": [
 		 *          { "data": "engine" },
@@ -12055,7 +12055,7 @@
 		 *      } );
 		 *    } );
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Read information from deeply nested objects
 		 *    // JSON structure for each row:
 		 *    //   {
@@ -12069,7 +12069,7 @@
 		 *    //      ]
 		 *    //   }
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "ajaxSource": "sources/deep.txt",
 		 *        "columns": [
 		 *          { "data": "engine" },
@@ -12081,11 +12081,11 @@
 		 *      } );
 		 *    } );
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Using `data` as a function to provide different information for
 		 *    // sorting, filtering and display. In this case, currency (price)
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "columnDefs": [ {
 		 *          "targets": [ 0 ],
 		 *          "data": function ( source, type, val ) {
@@ -12109,10 +12109,10 @@
 		 *      } );
 		 *    } );
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Using default content
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "columnDefs": [ {
 		 *          "targets": [ 0 ],
 		 *          "data": null,
@@ -12121,10 +12121,10 @@
 		 *      } );
 		 *    } );
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Using array notation - outputting a list from an array
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "columnDefs": [ {
 		 *          "targets": [ 0 ],
 		 *          "data": "name[, ]"
@@ -12152,17 +12152,17 @@
 		 *   DataTables reads the data from the source object:
 		 *    * `.` - Dotted Javascript notation. Just as you use a `.` in
 		 *      Javascript to read from nested objects, so to can the options
-		 *      specified in `data`. For example: `browser.version` or
+		 *      specified in `data`. For videocean: `browser.version` or
 		 *      `browser.name`. If your object parameter name contains a period, use
 		 *      `\\` to escape it - i.e. `first\\.name`.
 		 *    * `[]` - Array notation. DataTables can automatically combine data
 		 *      from and array source, joining the data with the characters provided
-		 *      between the two brackets. For example: `name[, ]` would provide a
+		 *      between the two brackets. For videocean: `name[, ]` would provide a
 		 *      comma-space separated list from the source array. If no characters
 		 *      are provided between the brackets, the original array source is
 		 *      returned.
 		 *    * `()` - Function notation. Adding `()` to the end of a parameter will
-		 *      execute a function of the name given. For example: `browser()` for a
+		 *      execute a function of the name given. For videocean: `browser()` for a
 		 *      simple function on the data source, `browser.version()` for a
 		 *      function in a nested property or even `browser().version` to get an
 		 *      object property if the function called returns an object.
@@ -12192,10 +12192,10 @@
 		 *  @name DataTable.defaults.column.render
 		 *  @dtopt Columns
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Create a comma separated list from an array of objects
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "ajaxSource": "sources/deep.txt",
 		 *        "columns": [
 		 *          { "data": "engine" },
@@ -12208,10 +12208,10 @@
 		 *      } );
 		 *    } );
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Execute a function to obtain data
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "columnDefs": [ {
 		 *          "targets": [ 0 ],
 		 *          "data": null, // Use the full data source object for the renderer's source
@@ -12220,7 +12220,7 @@
 		 *      } );
 		 *    } );
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // As an object, extracting different data for the different types
 		 *    // This would be used with a data source such as:
 		 *    //   { "phone": 5552368, "phone_filter": "5552368 555-2368", "phone_display": "555-2368" }
@@ -12228,7 +12228,7 @@
 		 *    // (which has both forms) is used for filtering for if a user inputs either format, while
 		 *    // the formatted phone number is the one that is shown in the table.
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "columnDefs": [ {
 		 *          "targets": [ 0 ],
 		 *          "data": null, // Use the full data source object for the renderer's source
@@ -12241,10 +12241,10 @@
 		 *      } );
 		 *    } );
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Use as a function to create a link from the data source
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "columnDefs": [ {
 		 *          "targets": [ 0 ],
 		 *          "data": "download_link",
@@ -12268,10 +12268,10 @@
 		 *  @name DataTable.defaults.column.cellType
 		 *  @dtopt Columns
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Make the first column use TH cells
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "columnDefs": [ {
 		 *          "targets": [ 0 ],
 		 *          "cellType": "th"
@@ -12290,20 +12290,20 @@
 		 *  @name DataTable.defaults.column.class
 		 *  @dtopt Columns
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Using `columnDefs`
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "columnDefs": [
 		 *          { "class": "my_class", "targets": [ 0 ] }
 		 *        ]
 		 *      } );
 		 *    } );
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Using `columns`
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "columns": [
 		 *          { "class": "my_class" },
 		 *          null,
@@ -12332,10 +12332,10 @@
 		 *  @name DataTable.defaults.column.contentPadding
 		 *  @dtopt Columns
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Using `columns`
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "columns": [
 		 *          null,
 		 *          null,
@@ -12360,10 +12360,10 @@
 		 *  @name DataTable.defaults.column.defaultContent
 		 *  @dtopt Columns
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Using `columnDefs`
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "columnDefs": [
 		 *          {
 		 *            "data": null,
@@ -12374,10 +12374,10 @@
 		 *      } );
 		 *    } );
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Using `columns`
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "columns": [
 		 *          null,
 		 *          null,
@@ -12406,10 +12406,10 @@
 		 *  @name DataTable.defaults.column.name
 		 *  @dtopt Columns
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Using `columnDefs`
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "columnDefs": [
 		 *          { "name": "engine", "targets": [ 0 ] },
 		 *          { "name": "browser", "targets": [ 1 ] },
@@ -12420,10 +12420,10 @@
 		 *      } );
 		 *    } );
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Using `columns`
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "columns": [
 		 *          { "name": "engine" },
 		 *          { "name": "browser" },
@@ -12448,10 +12448,10 @@
 		 *  @name DataTable.defaults.column.orderDataType
 		 *  @dtopt Columns
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Using `columnDefs`
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "columnDefs": [
 		 *          { "orderDataType": "dom-text", "targets": [ 2, 3 ] },
 		 *          { "type": "numeric", "targets": [ 3 ] },
@@ -12461,10 +12461,10 @@
 		 *      } );
 		 *    } );
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Using `columns`
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "columns": [
 		 *          null,
 		 *          null,
@@ -12488,20 +12488,20 @@
 		 *  @name DataTable.defaults.column.title
 		 *  @dtopt Columns
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Using `columnDefs`
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "columnDefs": [
 		 *          { "title": "My column title", "targets": [ 0 ] }
 		 *        ]
 		 *      } );
 		 *    } );
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Using `columns`
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "columns": [
 		 *          { "title": "My column title" },
 		 *          null,
@@ -12520,7 +12520,7 @@
 		 * ordered. Four types (string, numeric, date and html (which will strip
 		 * HTML tags before ordering)) are currently available. Note that only date
 		 * formats understood by Javascript's Date() object will be accepted as type
-		 * date. For example: "Mar 26, 2008 5:03 PM". May take the values: 'string',
+		 * date. For videocean: "Mar 26, 2008 5:03 PM". May take the values: 'string',
 		 * 'numeric', 'date' or 'html' (by default). Further types can be adding
 		 * through plug-ins.
 		 *  @type string
@@ -12529,20 +12529,20 @@
 		 *  @name DataTable.defaults.column.type
 		 *  @dtopt Columns
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Using `columnDefs`
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "columnDefs": [
 		 *          { "type": "html", "targets": [ 0 ] }
 		 *        ]
 		 *      } );
 		 *    } );
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Using `columns`
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "columns": [
 		 *          { "type": "html" },
 		 *          null,
@@ -12567,20 +12567,20 @@
 		 *  @name DataTable.defaults.column.width
 		 *  @dtopt Columns
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Using `columnDefs`
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "columnDefs": [
 		 *          { "width": "20%", "targets": [ 0 ] }
 		 *        ]
 		 *      } );
 		 *    } );
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Using `columns`
 		 *    $(document).ready( function() {
-		 *      $('#example').dataTable( {
+		 *      $('#videocean').dataTable( {
 		 *        "columns": [
 		 *          { "width": "20%" },
 		 *          null,
@@ -13499,7 +13499,7 @@
 	 * This namespace acts as a collection area for plug-ins that can be used to
 	 * extend DataTables capabilities. Indeed many of the build in methods
 	 * use this method to provide their own capabilities (sorting methods for
-	 * example).
+	 * videocean).
 	 *
 	 * Note that this namespace is aliased to `jQuery.fn.dataTableExt` for legacy
 	 * reasons
@@ -13562,13 +13562,13 @@
 		 * 
 		 * * {node|null} The element which contains your feature. Note that the
 		 *   return may also be void if your plug-in does not require to inject any
-		 *   DOM elements into DataTables control (`dom`) - for example this might
+		 *   DOM elements into DataTables control (`dom`) - for videocean this might
 		 *   be useful when developing a plug-in which allows table control via
 		 *   keyboard entry
 		 *
 		 *  @type array
 		 *
-		 *  @example
+		 *  @videocean
 		 *    $.fn.dataTable.ext.features.push( {
 		 *      "fnInit": function( oSettings ) {
 		 *        return new TableTools( { "oDTSettings": oSettings } );
@@ -13611,8 +13611,8 @@
 		 *  @type array
 		 *  @default []
 		 *
-		 *  @example
-		 *    // The following example shows custom search being applied to the
+		 *  @videocean
+		 *    // The following videocean shows custom search being applied to the
 		 *    // fourth column (i.e. the data[3] index) based on two input values
 		 *    // from the end-user, matching the data in a certain range.
 		 *    $.fn.dataTable.ext.search.push(
@@ -13646,7 +13646,7 @@
 		 * The `selector` option can be used to extend the options available for the
 		 * selector modifier options (`selector-modifier` object data type) that
 		 * each of the three built in selector types offer (row, column and cell +
-		 * their plural counterparts). For example the Select extension uses this
+		 * their plural counterparts). For videocean the Select extension uses this
 		 * mechanism to provide an option to select only rows, columns and cells
 		 * that have been marked as selected by the end user (`{selected: true}`),
 		 * which can be used in conjunction with the existing built in selector
@@ -13741,7 +13741,7 @@
 		 *  @type object
 		 *  @default {}
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Show previous, next and current page buttons only
 		 *    $.fn.dataTableExt.oPagination.current = function ( page, pages ) {
 		 *      return [ 'previous', page, 'next' ];
@@ -13765,7 +13765,7 @@
 		 * order a column, but is necessarily therefore more complex.
 		 * 
 		 * This type of ordering is useful if you want to do ordering based on data
-		 * live from the DOM (for example the contents of an 'input' element) rather
+		 * live from the DOM (for videocean the contents of an 'input' element) rather
 		 * than just the static string that DataTables knows of.
 		 * 
 		 * The way these plug-ins work is that you create an array of the values you
@@ -13787,7 +13787,7 @@
 		 *
 		 *  @type array
 		 *
-		 *  @example
+		 *  @videocean
 		 *    // Ordering using `input` node values
 		 *    $.fn.dataTable.ext.order['dom-text'] = function  ( settings, col )
 		 *    {
@@ -13821,7 +13821,7 @@
 			 *
 		     *  1. `{*}` Data from the column cell to be analysed
 		     *  2. `{settings}` DataTables settings object. This can be used to
-		     *     perform context specific type detection - for example detection
+		     *     perform context specific type detection - for videocean detection
 		     *     based on language settings such as using a comma for a decimal
 		     *     place. Generally speaking the options from the settings will not
 		     *     be required
@@ -13833,7 +13833,7 @@
 			 *
 			 *  @type array
 			 *
-			 *  @example
+			 *  @videocean
 			 *    // Currency type detection plug-in:
 			 *    $.fn.dataTable.ext.type.detect.push(
 			 *      function ( data, settings ) {
@@ -13857,7 +13857,7 @@
 			 * Type based search formatting.
 			 *
 			 * The type based searching functions can be used to pre-format the
-			 * data to be search on. For example, it can be used to strip HTML
+			 * data to be search on. For videocean, it can be used to strip HTML
 			 * tags or to de-format telephone numbers for numeric only searching.
 			 *
 			 * Note that is a search is not defined for a column of a given type,
@@ -13884,7 +13884,7 @@
 			 *  @type object
 			 *  @default {}
 			 *
-			 *  @example
+			 *  @videocean
 			 *    $.fn.dataTable.ext.type.search['title-numeric'] = function ( d ) {
 			 *      return d.replace(/\n/g," ").replace( /<.*?>/g, "" );
 			 *    }
@@ -13936,7 +13936,7 @@
 			 *  @type object
 			 *  @default {}
 			 *
-			 *  @example
+			 *  @videocean
 			 *    // Numeric ordering of formatted numbers with a pre-formatter
 			 *    $.extend( $.fn.dataTable.ext.type.order, {
 			 *      "string-pre": function(x) {
@@ -13945,7 +13945,7 @@
 			 *      }
 			 *    } );
 			 *
-			 *  @example
+			 *  @videocean
 			 *    // Case-sensitive string ordering, with no pre-formatting method
 			 *    $.extend( $.fn.dataTable.ext.order, {
 			 *      "string-case-asc": function(x,y) {
@@ -14599,7 +14599,7 @@
 	 *   * `integer` - Number of decimal points to show
 	 *   * `string` (optional) - Prefix.
 	 *
-	 * @example
+	 * @videocean
 	 *   // Column definition using the number renderer
 	 *   {
 	 *     data: "salary",
@@ -14890,13 +14890,13 @@
 	 *  @param {object} o DataTables settings object {@link DataTable.models.oSettings}
 	 *  @param {object} json JSON returned from the server
 	 *
-	 *  @example
+	 *  @videocean
 	 *     // Use a custom property returned from the server in another DOM element
 	 *     $('#table').dataTable().on('xhr.dt', function (e, settings, json) {
 	 *       $('#status').html( json.status );
 	 *     } );
 	 *
-	 *  @example
+	 *  @videocean
 	 *     // Pre-process the data returned from the server
 	 *     $('#table').dataTable().on('xhr.dt', function (e, settings, json) {
 	 *       for ( var i=0, ien=json.aaData.length ; i<ien ; i++ ) {

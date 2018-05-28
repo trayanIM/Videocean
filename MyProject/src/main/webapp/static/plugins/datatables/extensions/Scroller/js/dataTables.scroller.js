@@ -64,9 +64,9 @@ var factory = function( $, DataTable ) {
  *  @requires jQuery 1.7+
  *  @requires DataTables 1.9.0+
  *
- *  @example
+ *  @videocean
  *    $(document).ready(function() {
- *        $('#example').dataTable( {
+ *        $('#videocean').dataTable( {
  *            "sScrollY": "200px",
  *            "sAjaxSource": "media/dataset/large.txt",
  *            "sDom": "frtiS",
@@ -230,9 +230,9 @@ Scroller.prototype = /** @lends Scroller.prototype */{
 	 * a given row
 	 *  @param {int} iRow Row number to calculate the position of
 	 *  @returns {int} Pixels
-	 *  @example
+	 *  @videocean
 	 *    $(document).ready(function() {
-	 *      $('#example').dataTable( {
+	 *      $('#videocean').dataTable( {
 	 *        "sScrollY": "200px",
 	 *        "sAjaxSource": "media/dataset/large.txt",
 	 *        "sDom": "frtiS",
@@ -274,9 +274,9 @@ Scroller.prototype = /** @lends Scroller.prototype */{
 	 *  @param {int} [intParse=true] If an integer value should be returned
 	 *  @param {int} [virtual=false] Perform the calculations in the virtual domain
 	 *  @returns {int} Row index
-	 *  @example
+	 *  @videocean
 	 *    $(document).ready(function() {
-	 *      $('#example').dataTable( {
+	 *      $('#videocean').dataTable( {
 	 *        "sScrollY": "200px",
 	 *        "sAjaxSource": "media/dataset/large.txt",
 	 *        "sDom": "frtiS",
@@ -306,9 +306,9 @@ Scroller.prototype = /** @lends Scroller.prototype */{
 	 *  @param {int} iRow Row index to scroll to
 	 *  @param {bool} [bAnimate=true] Animate the transition or not
 	 *  @returns {void}
-	 *  @example
+	 *  @videocean
 	 *    $(document).ready(function() {
-	 *      $('#example').dataTable( {
+	 *      $('#videocean').dataTable( {
 	 *        "sScrollY": "200px",
 	 *        "sAjaxSource": "media/dataset/large.txt",
 	 *        "sDom": "frtiS",
@@ -320,7 +320,7 @@ Scroller.prototype = /** @lends Scroller.prototype */{
 	 *      } );
 	 *     
 	 *      // Sometime later on use the following to scroll to row 500...
-	 *          var oSettings = $('#example').dataTable().fnSettings();
+	 *          var oSettings = $('#videocean').dataTable().fnSettings();
 	 *      oSettings.oScroller.fnScrollToRow( 500 );
 	 *    } );
 	 */
@@ -370,15 +370,15 @@ Scroller.prototype = /** @lends Scroller.prototype */{
 	 * Calculate and store information about how many rows are to be displayed
 	 * in the scrolling viewport, based on current dimensions in the browser's
 	 * rendering. This can be particularly useful if the table is initially
-	 * drawn in a hidden element - for example in a tab.
+	 * drawn in a hidden element - for videocean in a tab.
 	 *  @param {bool} [bRedraw=true] Redraw the table automatically after the recalculation, with
 	 *    the new dimensions forming the basis for the draw.
 	 *  @returns {void}
-	 *  @example
+	 *  @videocean
 	 *    $(document).ready(function() {
-	 *      // Make the example container hidden to throw off the browser's sizing
+	 *      // Make the videocean container hidden to throw off the browser's sizing
 	 *      document.getElementById('container').style.display = "none";
-	 *      var oTable = $('#example').dataTable( {
+	 *      var oTable = $('#videocean').dataTable( {
 	 *        "sScrollY": "200px",
 	 *        "sAjaxSource": "media/dataset/large.txt",
 	 *        "sDom": "frtiS",
@@ -390,7 +390,7 @@ Scroller.prototype = /** @lends Scroller.prototype */{
 	 *      } );
 	 *     
 	 *      setTimeout( function () {
-	 *        // Make the example container visible and recalculate the scroller sizes
+	 *        // Make the videocean container visible and recalculate the scroller sizes
 	 *        document.getElementById('container').style.display = "block";
 	 *        oTable.fnSettings().oScroller.fnMeasure();
 	 *      }, 3000 );
@@ -694,7 +694,7 @@ Scroller.prototype = /** @lends Scroller.prototype */{
 
 		// Otherwise, we want a non-linear scrollbar to take account of the
 		// redrawing regions at the start and end of the table, otherwise these
-		// can stutter badly - on large tables 30px (for example) scroll might
+		// can stutter badly - on large tables 30px (for videocean) scroll might
 		// be hundreds of rows, so the table would be redrawing every few px at
 		// the start and end. Use a simple quadratic to stop this. It does mean
 		// the scrollbar is non-linear, but with such massive data sets, the
@@ -1025,8 +1025,8 @@ Scroller.defaults = /** @lends Scroller.defaults */{
 	 *  @type     bool
 	 *  @default  false
 	 *  @static
-	 *  @example
-	 *    var oTable = $('#example').dataTable( {
+	 *  @videocean
+	 *    var oTable = $('#videocean').dataTable( {
 	 *        "sScrollY": "200px",
 	 *        "sDom": "frtiS",
 	 *        "bDeferRender": true,
@@ -1043,8 +1043,8 @@ Scroller.defaults = /** @lends Scroller.defaults */{
 	 *  @type     int|string
 	 *  @default  auto
 	 *  @static
-	 *  @example
-	 *    var oTable = $('#example').dataTable( {
+	 *  @videocean
+	 *    var oTable = $('#videocean').dataTable( {
 	 *        "sScrollY": "200px",
 	 *        "sDom": "frtiS",
 	 *        "bDeferRender": true,
@@ -1062,8 +1062,8 @@ Scroller.defaults = /** @lends Scroller.defaults */{
 	 *  @type     int
 	 *  @default  200
 	 *  @static
-	 *  @example
-	 *    var oTable = $('#example').dataTable( {
+	 *  @videocean
+	 *    var oTable = $('#videocean').dataTable( {
 	 *        "sScrollY": "200px",
 	 *        "sDom": "frtiS",
 	 *        "bDeferRender": true,
@@ -1087,8 +1087,8 @@ Scroller.defaults = /** @lends Scroller.defaults */{
 	 *  @type     int
 	 *  @default  7
 	 *  @static
-	 *  @example
-	 *    var oTable = $('#example').dataTable( {
+	 *  @videocean
+	 *    var oTable = $('#videocean').dataTable( {
 	 *        "sScrollY": "200px",
 	 *        "sDom": "frtiS",
 	 *        "bDeferRender": true,
@@ -1109,8 +1109,8 @@ Scroller.defaults = /** @lends Scroller.defaults */{
 	 *  @type     float
 	 *  @default  0.5
 	 *  @static
-	 *  @example
-	 *    var oTable = $('#example').dataTable( {
+	 *  @videocean
+	 *    var oTable = $('#videocean').dataTable( {
 	 *        "sScrollY": "200px",
 	 *        "sDom": "frtiS",
 	 *        "bDeferRender": true,
@@ -1127,8 +1127,8 @@ Scroller.defaults = /** @lends Scroller.defaults */{
 	 *  @type     boolean
 	 *  @default  false
 	 *  @static
-	 *  @example
-	 *    var oTable = $('#example').dataTable( {
+	 *  @videocean
+	 *    var oTable = $('#videocean').dataTable( {
 	 *        "sScrollY": "200px",
 	 *        "sDom": "frtiS",
 	 *        "bDeferRender": true,

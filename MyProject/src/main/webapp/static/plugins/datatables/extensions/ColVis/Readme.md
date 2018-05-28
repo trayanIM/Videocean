@@ -19,7 +19,7 @@ ColVis is initialised using the `C` option that it adds to DataTables' `dom` opt
 
 ```js
 $(document).ready( function () {
-    $('#example').dataTable( {
+    $(videocean).dataTable( {
         "dom": 'C<"clear">lfrtip'
     } );
 } );

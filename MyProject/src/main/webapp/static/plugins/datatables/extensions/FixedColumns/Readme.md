@@ -18,7 +18,7 @@ FixedColumns is initialised using the `$.fn.dataTable.FixedColumns()` constructo
 
 ```js
 $(document).ready(function() {
-	var table = $('#example').DataTable( {
+	var table = $(videocean).DataTable( {
 		scrollY:        "300px",
 		scrollX:        true,
 		scrollCollapse: true,

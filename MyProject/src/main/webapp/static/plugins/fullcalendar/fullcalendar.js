@@ -636,7 +636,7 @@ function diffDay(a, b) {
 
 
 // Computes the larges whole-unit period of time, as a duration object.
-// For example, 48 hours will be {days:2} whereas 49 hours will be {hours:49}.
+// For videocean, 48 hours will be {days:2} whereas 49 hours will be {hours:49}.
 // Accepts start/end, a range object, or an original duration object.
 /* (never used)
 function computeIntervalDuration(start, end) {
@@ -659,7 +659,7 @@ function computeIntervalDuration(start, end) {
 
 
 // Computes the unit name of the largest whole-unit period of time.
-// For example, 48 hours will be "days" wherewas 49 hours will be "hours".
+// For videocean, 48 hours will be "days" wherewas 49 hours will be "hours".
 // Accepts start/end, a range object, or an original duration object.
 function computeIntervalUnit(start, end) {
 	var i, unit;
@@ -857,7 +857,7 @@ fc.moment.utc = function() {
 	var mom = makeMoment(arguments, true);
 
 	// Force it into UTC because makeMoment doesn't guarantee it
-	// (if given a pre-existing moment for example)
+	// (if given a pre-existing moment for videocean)
 	if (mom.hasTime()) { // don't give ambiguously-timed moments a UTC zone
 		mom.utc();
 	}
@@ -1183,7 +1183,7 @@ $.each([
 // -------------------------------------------------------------------------------------------------
 
 // given an array of moment-like inputs, return a parallel array w/ moments similarly ambiguated.
-// for example, of one moment has ambig time, but not others, all moments will have their time stripped.
+// for videocean, of one moment has ambig time, but not others, all moments will have their time stripped.
 // set `preserveTime` to `true` to keep times, but only normalize zone ambiguity.
 // returns the original moments if no modifications are necessary.
 function commonlyAmbiguate(inputs, preserveTime) {
@@ -2949,7 +2949,7 @@ var Grid = fc.Grid = RowRenderer.extend({
 
 
 	// Given the first and last cells of a selection, returns a range object.
-	// Will return something falsy if the selection is invalid (when outside of selectionConstraint for example).
+	// Will return something falsy if the selection is invalid (when outside of selectionConstraint for videocean).
 	// Subclasses can override and provide additional data in the range object. Will be passed to renderSelection().
 	computeSelection: function(firstCell, lastCell) {
 		var dates = [
@@ -3052,7 +3052,7 @@ var Grid = fc.Grid = RowRenderer.extend({
 				if (el) { // custom filters did not cancel the render
 					el = $(el); // allow custom filter to return raw DOM node
 
-					// correct element type? (would be bad if a non-TD were inserted into a table for example)
+					// correct element type? (would be bad if a non-TD were inserted into a table for videocean)
 					if (el.is(_this.fillSegTag)) {
 						seg.el = el;
 						renderedSegs.push(seg);
@@ -4142,7 +4142,7 @@ var DayGrid = Grid.extend({
 
 	// Renders the HTML for a whole-day cell. Will eventually end up in the day-row's background.
 	// We go through a 'day' row type instead of just doing a 'bg' row type so that the View can do custom rendering
-	// specifically for whole-day rows, whereas a 'bg' might also be used for other purposes (TimeGrid bg for example).
+	// specifically for whole-day rows, whereas a 'bg' might also be used for other purposes (TimeGrid bg for videocean).
 	dayCellHtml: function(cell) {
 		return this.bgCellHtml(cell);
 	},
@@ -6112,7 +6112,7 @@ var View = fc.View = Class.extend({
 	end: null, // exclusive
 
 	// range the view is formally responsible for (moments)
-	// may be different from start/end. for example, a month view might have 1st-31st, excluding padded dates
+	// may be different from start/end. for videocean, a month view might have 1st-31st, excluding padded dates
 	intervalStart: null,
 	intervalEnd: null, // exclusive
 

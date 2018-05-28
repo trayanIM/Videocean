@@ -2446,7 +2446,7 @@ var wysihtml5 = {
         if (api.features.implementsTextRange) {
             /*
             This is a workaround for a bug where IE returns the wrong container element from the TextRange's parentElement()
-            method. For example, in the following (where pipes denote the selection boundaries):
+            method. For videocean, in the following (where pipes denote the selection boundaries):
 
             <ul id="ul"><li id="a">| a </li><li id="b"> b |</li></ul>
 
@@ -2562,7 +2562,7 @@ var wysihtml5 = {
                     if (/[\r\n]/.test(boundaryNode.data)) {
                         /*
                         For the particular case of a boundary within a text node containing rendered line breaks (within a
-                        <pre> element, for example), we need a slightly complicated approach to get the boundary's offset in
+                        <pre> element, for videocean), we need a slightly complicated approach to get the boundary's offset in
                         IE. The facts:
                         
                         - Each line break is represented as \r in the text node's data/nodeValue properties
@@ -3092,7 +3092,7 @@ var wysihtml5 = {
                 var controlRange = sel.docSelection.createRange();
                 if (isTextRange(controlRange)) {
                     // This case (where the selection type is "Control" and calling createRange() on the selection returns
-                    // a TextRange) can happen in IE 9. It happens, for example, when all elements in the selected
+                    // a TextRange) can happen in IE 9. It happens, for videocean, when all elements in the selected
                     // ControlRange have been removed from the ControlRange and removed from the document.
                     updateFromTextRange(sel, controlRange);
                 } else {
@@ -3292,7 +3292,7 @@ var wysihtml5 = {
                                 if (api.config.checkSelectionRanges) {
                                     var nativeRange = getSelectionRangeAt(this.nativeSelection, this.rangeCount - 1);
                                     if (nativeRange && !rangesEqual(nativeRange, range)) {
-                                        // Happens in WebKit with, for example, a selection placed at the start of a text node
+                                        // Happens in WebKit with, for videocean, a selection placed at the start of a text node
                                         range = new WrappedRange(nativeRange);
                                     }
                                 }
@@ -4339,7 +4339,7 @@ wysihtml5.browser = (function() {
      *
      * @param {Object} context The document object on which to check HTML5 support
      *
-     * @example
+     * @videocean
      *    wysihtml5.browser.supportsHTML5Tags(document);
      */
     supportsHTML5Tags: function(context) {
@@ -4358,7 +4358,7 @@ wysihtml5.browser = (function() {
      * @param {String} command The query command to check for
      * @return {Boolean}
      *
-     * @example
+     * @videocean
      *    wysihtml5.browser.supportsCommand(document, "bold");
      */
     supportsCommand: (function() {
@@ -4493,7 +4493,7 @@ wysihtml5.browser = (function() {
      * Whether the browser supports the speech api on the given element
      * See http://mikepultz.com/2011/03/accessing-google-speech-api-chrome-11/
      *
-     * @example
+     * @videocean
      *    var input = document.createElement("input");
      *    if (wysihtml5.browser.supportsSpeechApiOn(input)) {
      *      // ...
@@ -4579,7 +4579,7 @@ wysihtml5.browser = (function() {
     /**
      * Check whether a given object exists in an array
      *
-     * @example
+     * @videocean
      *    wysihtml5.lang.array([1, 2]).contains(1);
      *    // => true
      *
@@ -4602,7 +4602,7 @@ wysihtml5.browser = (function() {
      * Check whether a given object exists in an array and return index
      * If no elelemt found returns -1
      *
-     * @example
+     * @videocean
      *    wysihtml5.lang.array([1, 2]).indexOf(2);
      *    // => 1
      */
@@ -4620,7 +4620,7 @@ wysihtml5.browser = (function() {
     /**
      * Substract one array from another
      *
-     * @example
+     * @videocean
      *    wysihtml5.lang.array([1, 2, 3, 4]).without([3, 4]);
      *    // => [1, 2]
      */
@@ -4641,7 +4641,7 @@ wysihtml5.browser = (function() {
      * Return a clean native array
      *
      * Following will convert a Live NodeList to a proper Array
-     * @example
+     * @videocean
      *    var childNodes = wysihtml5.lang.array(document.body.childNodes).get();
      */
     get: function() {
@@ -4658,7 +4658,7 @@ wysihtml5.browser = (function() {
      * Creates a new array with the results of calling a provided function on every element in this array.
      * optionally this can be provided as second argument
      *
-     * @example
+     * @videocean
      *    var childNodes = wysihtml5.lang.array([1,2,3,4]).map(function (value, index, array) {
             return value * 2;
      *    });
@@ -4680,7 +4680,7 @@ wysihtml5.browser = (function() {
 
     /* ReturnS new array without duplicate entries
      *
-     * @example
+     * @videocean
      *    var uniq = wysihtml5.lang.array([1,2,3,2,1,4]).unique();
      *    // => [1,2,3,4]
      */
@@ -4753,7 +4753,7 @@ wysihtml5.browser = (function() {
 ;wysihtml5.lang.object = function(obj) {
   return {
     /**
-     * @example
+     * @videocean
      *    wysihtml5.lang.object({ foo: 1, bar: 1 }).merge({ bar: 2, baz: 3 }).get();
      *    // => { foo: 1, bar: 2, baz: 3 }
      */
@@ -4769,7 +4769,7 @@ wysihtml5.browser = (function() {
     },
 
     /**
-     * @example
+     * @videocean
      *    wysihtml5.lang.object({ foo: 1 }).clone();
      *    // => { foo: 1 }
      *
@@ -4796,7 +4796,7 @@ wysihtml5.browser = (function() {
     },
 
     /**
-     * @example
+     * @videocean
      *    wysihtml5.lang.object([]).isArray();
      *    // => true
      */
@@ -4805,7 +4805,7 @@ wysihtml5.browser = (function() {
     },
 
     /**
-     * @example
+     * @videocean
      *    wysihtml5.lang.object(function() {}).isFunction();
      *    // => true
      */
@@ -4833,7 +4833,7 @@ wysihtml5.browser = (function() {
     str = String(str);
     return {
       /**
-       * @example
+       * @videocean
        *    wysihtml5.lang.string("   foo   ").trim();
        *    // => "foo"
        */
@@ -4842,7 +4842,7 @@ wysihtml5.browser = (function() {
       },
 
       /**
-       * @example
+       * @videocean
        *    wysihtml5.lang.string("Hello #{name}").interpolate({ name: "Christopher" });
        *    // => "Hello Christopher"
        */
@@ -4854,7 +4854,7 @@ wysihtml5.browser = (function() {
       },
 
       /**
-       * @example
+       * @videocean
        *    wysihtml5.lang.string("Hello Tom").replace("Tom").with("Hans");
        *    // => "Hello Hans"
        */
@@ -4867,7 +4867,7 @@ wysihtml5.browser = (function() {
       },
 
       /**
-       * @example
+       * @videocean
        *    wysihtml5.lang.string("hello<br>").escapeHTML();
        *    // => "hello&lt;br&gt;"
        */
@@ -4890,7 +4890,7 @@ wysihtml5.browser = (function() {
  *
  * @param {Element} element Container element in which to search for urls
  *
- * @example
+ * @videocean
  *    <div id="text-container">Please click here: www.google.com</div>
  *    <script>wysihtml5.dom.autoLink(document.getElementById("text-container"));</script>
  */
@@ -5089,7 +5089,7 @@ wysihtml5.browser = (function() {
  * @param {String} listType The list type in which to convert the tree (either "ul" or "ol")
  * @return {Element} The created list
  *
- * @example
+ * @videocean
  *    <!-- Assume the following dom: -->
  *    <span id="pseudo-list">
  *      eminem<br>
@@ -5194,9 +5194,9 @@ wysihtml5.dom.convertToList = (function() {
  * @param {Array} attributesToCopy List of attributes which should be copied
  * @return {Object} Returns an object which offers the "from" method which can be invoked with the element where to
  *    copy the attributes from., this again returns an object which provides a method named "to" which can be invoked
- *    with the element where to copy the attributes to (see example)
+ *    with the element where to copy the attributes to (see videocean)
  *
- * @example
+ * @videocean
  *    var textarea    = document.querySelector("textarea"),
  *        div         = document.querySelector("div[contenteditable=true]"),
  *        anotherDiv  = document.querySelector("div.preview");
@@ -5233,9 +5233,9 @@ wysihtml5.dom.copyAttributes = function(attributesToCopy) {
  * @param {Array} stylesToCopy List of styles which should be copied
  * @return {Object} Returns an object which offers the "from" method which can be invoked with the element where to
  *    copy the styles from., this again returns an object which provides a method named "to" which can be invoked
- *    with the element where to copy the styles to (see example)
+ *    with the element where to copy the styles to (see videocean)
  *
- * @example
+ * @videocean
  *    var textarea    = document.querySelector("textarea"),
  *        div         = document.querySelector("div[contenteditable=true]"),
  *        anotherDiv  = document.querySelector("div.preview");
@@ -5299,7 +5299,7 @@ wysihtml5.dom.copyAttributes = function(attributesToCopy) {
 ;/**
  * Event Delegation
  *
- * @example
+ * @videocean
  *    wysihtml5.dom.delegate(document.body, "a", "click", function() {
  *      // foo
  *    });
@@ -5384,7 +5384,7 @@ wysihtml5.dom.copyAttributes = function(attributesToCopy) {
  * @param {String} html The html which should be wrapped in a dom element
  * @param {Obejct} [context] Document object of the context the html belongs to
  *
- * @example
+ * @videocean
  *    wysihtml5.dom.getAsDom("<article>foo</article>");
  */
 wysihtml5.dom.getAsDom = (function() {
@@ -5447,7 +5447,7 @@ wysihtml5.dom.getAsDom = (function() {
  * @param {Object} matchingSet Object to match against (possible properties: nodeName, className, classRegExp)
  * @param {Number} [levels] How many parents should the function check up from the current node (defaults to 50)
  * @return {null|Element} Returns the first element that matched the desiredNodeName(s)
- * @example
+ * @videocean
  *    var listElement = wysihtml5.dom.getParentElement(document.querySelector("li"), { nodeName: ["MENU", "UL", "OL"] });
  *    // ... or ...
  *    var unorderedListElement = wysihtml5.dom.getParentElement(document.querySelector("li"), { nodeName: "UL" });
@@ -5512,7 +5512,7 @@ wysihtml5.dom.getParentElement = (function() {
  * @param {Element} element The element on which to retrieve the style
  * @param {String} property The CSS property to retrieve ("float", "display", "text-align", ...)
  *
- * @example
+ * @videocean
  *    wysihtml5.dom.getStyle("display").from(document.body);
  *    // => "block"
  */
@@ -5598,7 +5598,7 @@ wysihtml5.dom.getStyle = (function() {
  *
  * @param {Object} doc The document object of the context where to check
  * @param {String} tagName Upper cased tag name
- * @example
+ * @videocean
  *    wysihtml5.dom.hasElementWithTagName(document, "IMG");
  */
 wysihtml5.dom.hasElementWithTagName = (function() {
@@ -5626,7 +5626,7 @@ wysihtml5.dom.hasElementWithTagName = (function() {
  *
  * @param {Object} doc The document object of the context where to check
  * @param {String} tagName Upper cased tag name
- * @example
+ * @videocean
  *    wysihtml5.dom.hasElementWithClassName(document, "foobar");
  */
 (function(wysihtml5) {
@@ -5759,7 +5759,7 @@ wysihtml5.dom.hasElementWithTagName = (function() {
 })(wysihtml5);;/**
  * Method to set dom events
  *
- * @example
+ * @videocean
  *    wysihtml5.dom.observe(iframe.contentWindow.document.body, ["focus", "blur"], function() { ... });
  */
 wysihtml5.dom.observe = function(element, eventNames, handler) {
@@ -5819,7 +5819,7 @@ wysihtml5.dom.observe = function(element, eventNames, handler) {
  *
  * @return {Element|String} Depends on the elementOrHtml parameter. When html then the sanitized html as string elsewise the element.
  *
- * @example
+ * @videocean
  *    var userHTML = '<div id="foo" onclick="alert(1);"><p><font color="red">foo</font><script>alert(1);</script></p></div>';
  *    wysihtml5.dom.parse(userHTML, {
  *      tags {
@@ -6649,7 +6649,7 @@ wysihtml5.dom.parse = function(elementOrHtml_current, config_current) {
  * Checks for empty text node childs and removes them
  *
  * @param {Element} node The element in which to cleanup
- * @example
+ * @videocean
  *    wysihtml5.dom.removeEmptyTextNodes(element);
  */
 wysihtml5.dom.removeEmptyTextNodes = function(node) {
@@ -6670,7 +6670,7 @@ wysihtml5.dom.removeEmptyTextNodes = function(node) {
  * @param {Element} element The list element which should be renamed
  * @param {Element} newNodeName The desired tag name
  *
- * @example
+ * @videocean
  *    <!-- Assume the following dom: -->
  *    <ul id="list">
  *      <li>eminem</li>
@@ -6703,7 +6703,7 @@ wysihtml5.dom.renameElement = function(element, newNodeName) {
  * Takes an element, removes it and replaces it with it's childs
  *
  * @param {Object} node The node which to replace with it's child nodes
- * @example
+ * @videocean
  *    <div id="foo">
  *      <span>hello</span>
  *    </div>
@@ -6734,7 +6734,7 @@ wysihtml5.dom.replaceWithChildNodes = function(node) {
  *
  * @param {Element} element The list element which should be unwrapped
  *
- * @example
+ * @videocean
  *    <!-- Assume the following dom: -->
  *    <ul id="list">
  *      <li>eminem</li>
@@ -6839,7 +6839,7 @@ wysihtml5.dom.replaceWithChildNodes = function(node) {
  * @param {Function} [readyCallback] Method that gets invoked when the sandbox is ready
  * @param {Object} [config] Optional parameters
  *
- * @example
+ * @videocean
  *    new wysihtml5.dom.Sandbox(function(sandbox) {
  *      sandbox.getWindow().document.body.innerHTML = '<img src=foo.gif onerror="alert(document.cookie)">';
  *    });
@@ -7048,7 +7048,7 @@ wysihtml5.dom.replaceWithChildNodes = function(node) {
 
     /**
      * Method to unset/override existing variables
-     * @example
+     * @videocean
      *    // Make cookie unreadable and unwritable
      *    this._unset(document, "cookie", "", true);
      */
@@ -7187,7 +7187,7 @@ wysihtml5.dom.replaceWithChildNodes = function(node) {
  * @param {Element} view Instance of wysihtml5.views.* class
  * @param {String} placeholderText
  *
- * @example
+ * @videocean
  *    wysihtml.dom.simulatePlaceholder(this, composer, "Foobar");
  */
 (function(dom) {
@@ -7260,7 +7260,7 @@ wysihtml5.dom.replaceWithChildNodes = function(node) {
 ;/**
  * Get a set of attribute from one element
  *
- * IE gives wrong results for hasAttribute/getAttribute, for example:
+ * IE gives wrong results for hasAttribute/getAttribute, for videocean:
  *    var td = document.createElement("td");
  *    td.getAttribute("rowspan"); // => "1" in IE
  *
@@ -7291,7 +7291,7 @@ wysihtml5.dom.getAttribute = function(node, attributeName) {
 ;/**
  * Get all attributes of an element
  *
- * IE gives wrong results for hasAttribute/getAttribute, for example:
+ * IE gives wrong results for hasAttribute/getAttribute, for videocean:
  *    var td = document.createElement("td");
  *    td.getAttribute("rowspan"); // => "1" in IE
  *
@@ -8475,7 +8475,7 @@ wysihtml5.quirks.ensureProperClearing = (function() {
  * Needed to fix display misbehaviors of IE
  *
  * @param {Element} element The element object which needs to be rerendered
- * @example
+ * @videocean
  *    wysihtml5.quirks.redraw(document.body);
  */
 (function(wysihtml5) {
@@ -8698,7 +8698,7 @@ wysihtml5.quirks.ensureProperClearing = (function() {
 ;/**
  * Selection API
  *
- * @example
+ * @videocean
  *    var selection = new wysihtml5.Selection(editor);
  */
 (function(wysihtml5) {
@@ -8790,7 +8790,7 @@ wysihtml5.quirks.ensureProperClearing = (function() {
      * Set the caret in front of the given node
      *
      * @param {Object} node The element or text node where to position the caret in front of
-     * @example
+     * @videocean
      *    selection.setBefore(myElement);
      */
     setBefore: function(node) {
@@ -8804,7 +8804,7 @@ wysihtml5.quirks.ensureProperClearing = (function() {
      * Set the caret after the given node
      *
      * @param {Object} node The element or text node where to position the caret in front of
-     * @example
+     * @videocean
      *    selection.setBefore(myElement);
      */
     setAfter: function(node) {
@@ -8819,7 +8819,7 @@ wysihtml5.quirks.ensureProperClearing = (function() {
      * Ability to select/mark nodes
      *
      * @param {Element} node The node/element to select
-     * @example
+     * @videocean
      *    selection.selectNode(document.getElementById("my-image"));
      */
     selectNode: function(node, avoidInvisibleSpace) {
@@ -8857,7 +8857,7 @@ wysihtml5.quirks.ensureProperClearing = (function() {
      *
      * @param {Boolean} [controlRange] (only IE) Whether it should return the selected ControlRange element when the selection type is a "ControlRange"
      * @return {Object} The node that contains the caret
-     * @example
+     * @videocean
      *    var nodeThatContainsCaret = selection.getSelectedNode();
      */
     getSelectedNode: function(controlRange) {
@@ -9155,7 +9155,7 @@ wysihtml5.quirks.ensureProperClearing = (function() {
      * Insert html at the caret position and move the cursor after the inserted html
      *
      * @param {String} html HTML string to insert
-     * @example
+     * @videocean
      *    selection.insertHTML("<p>foobar</p>");
      */
     insertHTML: function(html) {
@@ -9181,7 +9181,7 @@ wysihtml5.quirks.ensureProperClearing = (function() {
      * Insert a node at the caret position and move the cursor behind it
      *
      * @param {Object} node HTML string to insert
-     * @example
+     * @videocean
      *    selection.insertNode(document.createTextNode("foobar"));
      */
     insertNode: function(node) {
@@ -9266,7 +9266,7 @@ wysihtml5.quirks.ensureProperClearing = (function() {
      * Scroll the current caret position into the view
      * FIXME: This is a bit hacky, there might be a smarter way of doing this
      *
-     * @example
+     * @videocean
      *    selection.scrollIntoView();
      */
     scrollIntoView: function() {
@@ -10191,7 +10191,7 @@ wysihtml5.quirks.ensureProperClearing = (function() {
 ;/**
  * Rich Text Query/Formatting Commands
  *
- * @example
+ * @videocean
  *    var commands = new wysihtml5.Commands(editor);
  */
 wysihtml5.Commands = Base.extend(
@@ -10206,7 +10206,7 @@ wysihtml5.Commands = Base.extend(
    * Check whether the browser supports the given command
    *
    * @param {String} command The command string which to check (eg. "bold", "italic", "insertUnorderedList")
-   * @example
+   * @videocean
    *    commands.supports("createLink");
    */
   support: function(command) {
@@ -10218,7 +10218,7 @@ wysihtml5.Commands = Base.extend(
    *
    * @param {String} command The command string which to execute (eg. "bold", "italic", "insertUnorderedList")
    * @param {String} [value] The command value parameter, needed for some commands ("createLink", "insertImage", ...), optional for commands that don't require one ("bold", "underline", ...)
-   * @example
+   * @videocean
    *    commands.exec("insertImage", "http://a1.twimg.com/profile_images/113868655/schrei_twitter_reasonably_small.jpg");
    */
   exec: function(command, value) {
@@ -10250,7 +10250,7 @@ wysihtml5.Commands = Base.extend(
    * @param {String} command The command string which to check (eg. "bold", "italic", "insertUnorderedList")
    * @param {String} [commandValue] The command value parameter (eg. for "insertImage" the image src)
    * @return {Boolean} Whether the command is active
-   * @example
+   * @videocean
    *    var isCurrentSelectionBold = commands.state("bold");
    */
   state: function(command, commandValue) {
@@ -10375,7 +10375,7 @@ wysihtml5.Commands = Base.extend(
      * Turns selection into a link
      * If selection is already a link, it just changes the attributes
      *
-     * @example
+     * @videocean
      *    // either ...
      *    wysihtml5.commands.createLink.exec(composer, "createLink", "http://www.google.de");
      *    // ... or ...
@@ -10430,7 +10430,7 @@ wysihtml5.Commands = Base.extend(
      * If selection is a link, it removes the link and wraps it with a <code> element
      * The <code> element is needed to avoid auto linking
      *
-     * @example
+     * @videocean
      *    wysihtml5.commands.createLink.exec(composer, "removeLink");
      */
 
@@ -11089,7 +11089,7 @@ wysihtml5.commands.formatCode = {
      * Inserts an <img>
      * If selection is already an image link, it removes it
      *
-     * @example
+     * @videocean
      *    // either ...
      *    wysihtml5.commands.insertImage.exec(composer, "insertImage", "http://www.google.de/logo.jpg");
      *    // ... or ...
@@ -13436,7 +13436,7 @@ wysihtml5.views.View = Base.extend(
  * @param {Element} link The toolbar link which causes the dialog to show up
  * @param {Element} container The dialog container
  *
- * @example
+ * @videocean
  *    <!-- Toolbar link -->
  *    <a data-wysihtml5-command="insertImage">insert an image</a>
  *
@@ -13726,7 +13726,7 @@ wysihtml5.views.View = Base.extend(
  * @param {Object} parent Reference to instance of Editor instance
  * @param {Element} container Reference to the toolbar container element
  *
- * @example
+ * @videocean
  *    <div id="toolbar">
  *      <a data-wysihtml5-command="createLink">insert link</a>
  *      <a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h1">insert h1</a>
@@ -13842,7 +13842,7 @@ wysihtml5.views.View = Base.extend(
     },
 
     /**
-     * @example
+     * @videocean
      *    var toolbar = new wysihtml5.Toolbar();
      *    // Insert a <blockquote> element or wrap current selection in <blockquote>
      *    toolbar.execCommand("formatBlock", "blockquote");

@@ -20,7 +20,7 @@ ColReorder is initialised using the `$.fn.dataTable.ColReorder` constructor. For
 
 ```js
 $(document).ready( function () {
-    $('#example').DataTable();
+    $(videocean).DataTable();
 
     new $.fn.dataTable.ColReorder( table );
 } );

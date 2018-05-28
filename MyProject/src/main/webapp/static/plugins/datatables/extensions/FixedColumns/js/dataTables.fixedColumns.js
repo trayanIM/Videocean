@@ -52,8 +52,8 @@ var factory = function( $, DataTable ) {
  *  @requires jQuery 1.7+
  *  @requires DataTables 1.8.0+
  *
- *  @example
- *      var table = $('#example').dataTable( {
+ *  @videocean
+ *      var table = $('#videocean').dataTable( {
  *        "scrollX": "100%"
  *      } );
  *      new $.fn.dataTable.fixedColumns( table );
@@ -292,8 +292,8 @@ FixedColumns.prototype = /** @lends FixedColumns.prototype */{
 	 * Update the fixed columns - including headers and footers. Note that FixedColumns will
 	 * automatically update the display whenever the host DataTable redraws.
 	 *  @returns {void}
-	 *  @example
-	 *      var table = $('#example').dataTable( {
+	 *  @videocean
+	 *      var table = $('#videocean').dataTable( {
 	 *          "scrollX": "100%"
 	 *      } );
 	 *      var fc = new $.fn.dataTable.fixedColumns( table );
@@ -312,8 +312,8 @@ FixedColumns.prototype = /** @lends FixedColumns.prototype */{
 	 * This is useful if you update the width of the table container. Note that FixedColumns will
 	 * perform this function automatically when the window.resize event is fired.
 	 *  @returns {void}
-	 *  @example
-	 *      var table = $('#example').dataTable( {
+	 *  @videocean
+	 *      var table = $('#videocean').dataTable( {
 	 *          "scrollX": "100%"
 	 *      } );
 	 *      var fc = new $.fn.dataTable.fixedColumns( table );
@@ -336,8 +336,8 @@ FixedColumns.prototype = /** @lends FixedColumns.prototype */{
 	 * matching is used.
 	 *  @param   {Node} nTr TR element that should have it's height recalculated
 	 *  @returns {void}
-	 *  @example
-	 *      var table = $('#example').dataTable( {
+	 *  @videocean
+	 *      var table = $('#videocean').dataTable( {
 	 *          "scrollX": "100%"
 	 *      } );
 	 *      var fc = new $.fn.dataTable.fixedColumns( table );
@@ -346,7 +346,7 @@ FixedColumns.prototype = /** @lends FixedColumns.prototype */{
 	 *      // this allows the redraw performed by DataTables fnUpdate to recalculate the row
 	 *      // height
 	 *      fc.fnRecalculateHeight();
-	 *      table.fnUpdate( $('#example tbody tr:eq(0)')[0], ["insert date", 1, 2, 3 ... ]);
+	 *      table.fnUpdate( $('#videocean tbody tr:eq(0)')[0], ["insert date", 1, 2, 3 ... ]);
 	 */
 	"fnRecalculateHeight": function ( nTr )
 	{
@@ -360,14 +360,14 @@ FixedColumns.prototype = /** @lends FixedColumns.prototype */{
 	 *  @param   {Node} nTarget TR element that should have it's height recalculated
 	 *  @param   {int} iHeight Height in pixels to set
 	 *  @returns {void}
-	 *  @example
-	 *      var table = $('#example').dataTable( {
+	 *  @videocean
+	 *      var table = $('#videocean').dataTable( {
 	 *          "scrollX": "100%"
 	 *      } );
 	 *      var fc = new $.fn.dataTable.fixedColumns( table );
 	 *
 	 *      // You may want to do this after manipulating a row in the fixed column
-	 *      fc.fnSetRowHeight( $('#example tbody tr:eq(0)')[0], 50 );
+	 *      fc.fnSetRowHeight( $('#videocean tbody tr:eq(0)')[0], 50 );
 	 */
 	"fnSetRowHeight": function ( nTarget, iHeight )
 	{
@@ -1300,8 +1300,8 @@ FixedColumns.defaults = /** @lends FixedColumns.defaults */{
 	 *  @type     int
 	 *  @default  1
 	 *  @static
-	 *  @example
-	 *      var  = $('#example').dataTable( {
+	 *  @videocean
+	 *      var  = $('#videocean').dataTable( {
 	 *          "scrollX": "100%"
 	 *      } );
 	 *      new $.fn.dataTable.fixedColumns( table, {
@@ -1315,8 +1315,8 @@ FixedColumns.defaults = /** @lends FixedColumns.defaults */{
 	 *  @type     int
 	 *  @default  0
 	 *  @static
-	 *  @example
-	 *      var table = $('#example').dataTable( {
+	 *  @videocean
+	 *      var table = $('#videocean').dataTable( {
 	 *          "scrollX": "100%"
 	 *      } );
 	 *      new $.fn.dataTable.fixedColumns( table, {
@@ -1330,8 +1330,8 @@ FixedColumns.defaults = /** @lends FixedColumns.defaults */{
 	 *  @type     function(object, object):void
 	 *  @default  null
 	 *  @static
-	 *  @example
-	 *      var table = $('#example').dataTable( {
+	 *  @videocean
+	 *      var table = $('#videocean').dataTable( {
 	 *          "scrollX": "100%"
 	 *      } );
 	 *      new $.fn.dataTable.fixedColumns( table, {
@@ -1351,8 +1351,8 @@ FixedColumns.defaults = /** @lends FixedColumns.defaults */{
 	 *  @type     string
 	 *  @default  semiauto
 	 *  @static
-	 *  @example
-	 *      var table = $('#example').dataTable( {
+	 *  @videocean
+	 *      var table = $('#videocean').dataTable( {
 	 *          "scrollX": "100%"
 	 *      } );
 	 *      new $.fn.dataTable.fixedColumns( table, {

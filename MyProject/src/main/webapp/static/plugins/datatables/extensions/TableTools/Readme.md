@@ -22,7 +22,7 @@ TableTools is initialised using the `T` option that it adds to DataTables' `dom`
 
 ```js
 $(document).ready( function () {
-	$('#example').DataTable( {
+	$(videocean).DataTable( {
 		dom: 'T<"clear">lfrtip'
 	} );
 } );
