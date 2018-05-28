@@ -7,11 +7,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @RequestMapping(value = "/terms")
-public class Terms {
+public class TermsController {
 
 	@RequestMapping(method = RequestMethod.GET)
 	public String sayHello(Model model) {
 		return "terms";
 	}
-
 }

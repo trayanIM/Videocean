@@ -2,6 +2,7 @@ package com.videocean.controller;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.logging.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -36,6 +37,8 @@ import com.videocean.exception.UserException;
 @Controller
 public class FileUploadController {
 
+	private Logger logger = Logger.getLogger(FileUploadController.class.getName());
+
 	private static String UPLOAD_LOCATION = "E:/VideoceanFiles/";
 
 	@Autowired
@@ -60,7 +63,7 @@ public class FileUploadController {
 		try {
 			model.addAttribute("categories", categoryes.getAllCategories());
 		} catch (CategoryException e) {
-			e.printStackTrace();
+			logger.info("Error while returning upload page!");
 		}
 		return "upload";
 	}
@@ -69,16 +72,16 @@ public class FileUploadController {
 	public String singleFileUpload(@Valid FileBucket fileBucket, BindingResult result, ModelMap model,
 			HttpServletRequest request) throws IOException {
 
-		String check = fileBucket.getFile().getOriginalFilename().substring(
+		String fileSufix = fileBucket.getFile().getOriginalFilename().substring(
 				fileBucket.getFile().getOriginalFilename().length() - 3,
 				fileBucket.getFile().getOriginalFilename().length());
-		System.out.println(check);
-		if (check.equals("mp4") || check.equals("ogg")) {
+		logger.info("File sufix is " + fileSufix);
+		if (fileSufix.equals("mp4") || fileSufix.equals("ogg")) {
 			if (result.hasErrors()) {
-				System.out.println("validation errors");
+				logger.info("Errors during clip validation!");
 				return "upload";
 			} else {
-				System.out.println("Fetching file");
+				logger.info("Fetching file!");
 				MultipartFile multipartFile = fileBucket.getFile();
 				User user = (User) request.getSession().getAttribute("user");
 				UserDAO usDAO = new UserDAO();
@@ -110,7 +113,7 @@ public class FileUploadController {
 						Category thisCategory = category.getCategoryByID(fileBucket.getCategory());
 						clip.setCategory(thisCategory);
 					} catch (CategoryException e) {
-						e.printStackTrace();
+						logger.info(e.getMessage());
 					}
 
 					clip.setDescription(fileBucket.getDescription());
@@ -130,14 +133,12 @@ public class FileUploadController {
 					request.setAttribute("user", user);
 				} catch (PlaylistException | UserException | ClipException e) {
 					// TODO Auto-generated catch block
-					e.printStackTrace();
-					String error = "There is already such a video";
+					String error = "The video you are trying to upload is already existing!";
+					logger.info(error);
 					model.addAttribute("error", error);
 					return "upload";
 
 				}
-				// Now do something with file...
-				System.out.println("do tuk e dobre");
 				if (path != null) {
 					FileCopyUtils.copy(fileBucket.getFile().getBytes(), new File(UPLOAD_LOCATION + path));
 				} else {
@@ -149,7 +150,7 @@ public class FileUploadController {
 				return "redirect:index";
 			}
 		} else {
-			String error = "Wrong video format";
+			String error = "Wrong video format! The supported video formats are mp4 and ogg!";
 			model.addAttribute("error", error);
 			return "upload";
 		}

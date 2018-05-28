@@ -9,8 +9,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class CommentDAO extends AbstractDAO {
+
+	private Logger logger = Logger.getLogger(CommentDAO.class.getName());
 
 	private static final String ADD_ANSWER_COMMENT = "INSERT INTO comments VALUES(NULL,?,?,?);";
 	private static final String ADD_MAIN_COMMENT = "INSERT INTO comments VALUES(NULL,?,?,NULL);";
@@ -29,19 +32,24 @@ public class CommentDAO extends AbstractDAO {
 			List<Comment> mainComments = new ArrayList<Comment>();
 
 			while (rs.next()) {
-				int id = rs.getInt(1);
-				int clipsID = rs.getInt(2);
-				String description = rs.getString(3);
-				Comment comment = new Comment(id, clipsID, description);
+				Comment comment = getComment(rs);
 				mainComments.add(comment);
 			}
 			return mainComments;
 		} catch (SQLException e) {
-			e.printStackTrace();
-			throw new CommentException("No comments to show! ");
+			String errorMessage = "Comments have not been found! ";
+			logger.info(errorMessage);
+			throw new CommentException(errorMessage);
 		} finally {
 			CategoryDAO.closeConnection(ps, rs);
 		}
+	}
+
+	private Comment getComment(ResultSet rs) throws SQLException {
+		int id = rs.getInt(1);
+		int clipsID = rs.getInt(2);
+		String description = rs.getString(3);
+		return new Comment(id, clipsID, description);
 	}
 
 	public List<Comment> getListAnswerComments(int clipID, int commentID) throws CommentException {
@@ -56,16 +64,14 @@ public class CommentDAO extends AbstractDAO {
 			List<Comment> answerComments = new ArrayList<Comment>();
 
 			while (rs.next()) {
-				int id = rs.getInt(1);
-				int clipsID = rs.getInt(2);
-				String description = rs.getString(3);
-				Comment comment = new Comment(id, clipsID, description);
+				Comment comment = getComment(rs);
 				answerComments.add(comment);
 			}
 			return answerComments;
 		} catch (SQLException e) {
-			e.printStackTrace();
-			throw new CommentException("No answer comments to show! ");
+			String errorMessage = "Comments answers have not been found! ";
+			logger.info(errorMessage);
+			throw new CommentException(errorMessage);
 		} finally {
 			CategoryDAO.closeConnection(ps, rs);
 		}
@@ -78,14 +84,9 @@ public class CommentDAO extends AbstractDAO {
 			ps.setInt(1, commentId);
 			ps.executeUpdate();
 		} catch (Exception e) {
-			throw new CommentException("Problem with comment removing", e);
+			throw new CommentException("A problem appear during comment removal! ", e);
 		} finally {
-			try {
-				if (ps != null)
-					ps.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
+			closeConnection(ps);
 		}
 	}
 
@@ -102,8 +103,9 @@ public class CommentDAO extends AbstractDAO {
 			id.next();
 			return id.getInt(1);
 		} catch (SQLException e) {
-			e.printStackTrace();
-			throw new CommentException("Can't add main comment", e);
+			String errorMessage = "Adding comment has failed!";
+			logger.info(errorMessage);
+			throw new CommentException(errorMessage, e);
 		} finally {
 			CategoryDAO.closeConnection(ps, id);
 		}
@@ -123,8 +125,9 @@ public class CommentDAO extends AbstractDAO {
 			id.next();
 			return id.getInt(1);
 		} catch (SQLException e) {
-			e.printStackTrace();
-			throw new CommentException("Can't add answer comment", e);
+			String errorMessage = "Adding comment answer has failed!";
+			logger.info(errorMessage);
+			throw new CommentException(errorMessage, e);
 		} finally {
 			CategoryDAO.closeConnection(ps, id);
 		}

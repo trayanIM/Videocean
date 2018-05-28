@@ -4,6 +4,7 @@ import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.logging.Logger;
 
 import javax.servlet.http.HttpServletResponse;
 
@@ -18,9 +19,12 @@ import com.videocean.service.dao.ClipDAO;
 import com.videocean.exception.ClipException;
 
 @Controller
-public class LoadSongController {
+public class LoadVideoController {
+
+	private Logger logger = Logger.getLogger(LoadVideoController.class.getName());
+
 	@RequestMapping(method = RequestMethod.GET, value = "/load-{id}")
-	public void showClientDetails(@PathVariable("id") Integer id, Model viewModel, HttpServletResponse response) {
+	public void loadVideo(@PathVariable("id") Integer id, Model viewModel, HttpServletResponse response) {
 		ClipDAO clipDao = new ClipDAO();
 		Clip currentClip = null;
 		String currentClipUri = null;
@@ -44,11 +48,8 @@ public class LoadSongController {
 			in.close();
 		} catch (ClipException | IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.info(e.getMessage());
 		}
-
-		// Copy the contents of the file to the output stream
-
 	}
 
 }

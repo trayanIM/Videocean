@@ -4,24 +4,23 @@ import com.videocean.exception.CommentException;
 
 public interface IClip {
 
-	void addLike();
-	
-	void removeLike();
+    void addLike();
 
-	void addDislike();
-	
-	void removeDislike();
+    void removeLike();
 
-	void addViews();
+    void addDislike();
 
-	void addComment(Comment comment) throws CommentException;
+    void removeDislike();
 
-	void removeComment(Comment comment) throws CommentException;
+    void addViews();
 
-	void removeAnswer(Comment answer, Comment comment) throws CommentException;
+    void addComment(Comment comment) throws CommentException;
+
+    void removeComment(Comment comment) throws CommentException;
+
+    void removeAnswer(Comment answer, Comment comment) throws CommentException;
 
 
-
-	void addAnswer(Comment answer, Comment comment) throws CommentException;
+    void addAnswer(Comment answer, Comment comment) throws CommentException;
 
 }

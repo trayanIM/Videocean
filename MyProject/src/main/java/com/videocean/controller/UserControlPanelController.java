@@ -2,6 +2,7 @@ package com.videocean.controller;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
@@ -20,10 +21,12 @@ import com.videocean.service.dao.UserDAO;
 import com.videocean.exception.UserException;
 
 @Controller
-public class UserControlPanel {
+public class UserControlPanelController {
+
+	private Logger logger = Logger.getLogger(UserControlPanelController.class.getName());
 
 	@RequestMapping(method = RequestMethod.GET, value = "/user")
-	public String userControl(Model viewModel, HttpServletRequest request) {
+	public String getUserPage(Model viewModel, HttpServletRequest request) {
 		if (request.getSession().getAttribute("user") == null) {
 			return "error";
 		}
@@ -38,9 +41,9 @@ public class UserControlPanel {
 			if (!followers.isEmpty()) {
 				count = followers.size();
 			}
-		} catch (UserException e1) {
+		} catch (UserException e) {
 			// TODO Auto-generated catch block
-			e1.printStackTrace();
+			logger.info(e.getMessage());
 		}
 
 		try {
@@ -71,14 +74,13 @@ public class UserControlPanel {
 			viewModel.addAttribute("currentURL", "user-" + user.getUserID());
 			return "userControlPanel";
 		} catch (UserException | ClipException e) {
-
-			e.printStackTrace();
+			logger.info(e.getMessage());
 			return "redirect:index";
 		}
 	}
 
 	@RequestMapping(method = RequestMethod.GET, value = "/user-{id}")
-	public String otherUser(@PathVariable("id") Integer id, Model viewModel, HttpServletRequest request) {
+	public String getOtherUserPage(@PathVariable("id") Integer id, Model viewModel, HttpServletRequest request) {
 		if (request.getSession().getAttribute("user") == null) {
 			return "error";
 		}
@@ -95,9 +97,9 @@ public class UserControlPanel {
 				if (!followers.isEmpty()) {
 					count = followers.size();
 				}
-			} catch (UserException e1) {
+			} catch (UserException e) {
 				// TODO Auto-generated catch block
-				e1.printStackTrace();
+				logger.info(e.getMessage());
 			}
 			viewModel.addAttribute("follow", count);
 			int views = userDao.countTheViewsOfThisUserClips(user);
@@ -127,16 +129,15 @@ public class UserControlPanel {
 			viewModel.addAttribute("currentURL", "user-" + id);
 			return "userControlPanel";
 		} catch (UserException | ClipException e) {
-
-			e.printStackTrace();
+			logger.info(e.getMessage());
 			return "redirect:index";
 		}
 
 	}
 
 	@RequestMapping(method = RequestMethod.POST, value = "/user-{id}/follow")
-	public @ResponseBody String addLikeToClip(@PathVariable("id") Integer id, Model viewModel,
-			HttpServletRequest request) {
+	public @ResponseBody String followClip(@PathVariable("id") Integer id, Model viewModel,
+										   HttpServletRequest request) {
 		int follow = 0;
 		String stFollow = null;
 		SubscriptionFollowerDAO subDao = null;
@@ -160,9 +161,7 @@ public class UserControlPanel {
 
 		} catch (UserException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-			System.out.println("nyama takav clip");
-
+			logger.info(e.getMessage());
 		}
 		try {
 			foll = subDao.getFollowers(id);
@@ -172,7 +171,7 @@ public class UserControlPanel {
 
 		} catch (UserException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.info(e.getMessage());
 		}
 		stFollow = "" + follow;
 		return (String) "{\"follow\":" + stFollow + "}";

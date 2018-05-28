@@ -1,28 +1,28 @@
 package com.videocean.service.dao;
 
 import com.videocean.exception.ClipException;
-import com.videocean.model.Playlist;
 import com.videocean.exception.PlaylistException;
+import com.videocean.model.Playlist;
 
 public interface IPlaylistDAO {
 
-	// Create Playlist
-	int createPlaylist(Playlist playlist) throws PlaylistException;
+    // Create Playlist
+    int createPlaylist(Playlist playlist) throws PlaylistException;
 
-	// ADD Clip To Playlist
-	void addClipToPlaylist(int i, int j) throws PlaylistException, ClipException;
+    // ADD Clip To Playlist
+    void addClipToPlaylist(int i, int j) throws PlaylistException, ClipException;
 
-	// REMOVE clip from Playlist
-	void removeClipFromPlaylist(int playlistId, int clipId) throws PlaylistException;
+    // REMOVE clip from Playlist
+    void removeClipFromPlaylist(int playlistId, int clipId) throws PlaylistException;
 
-	// Increase Views of playlist by playlist ID
-	void increaseViewsOfPlaylist(Playlist playlist);
+    // Increase Views of playlist by playlist ID
+    void increaseViewsOfPlaylist(Playlist playlist);
 
-	Playlist getAllClipsForPlaylist(int playlistID) throws PlaylistException;
+    Playlist getAllClipsForPlaylist(int playlistID) throws PlaylistException;
 
-	// metoda vrashta playlist po ID ot tablicata s playlists
-	Playlist getPlaylistById(int playlistId) throws PlaylistException;
+    // metoda vrashta playlist po ID ot tablicata s playlists
+    Playlist getPlaylistById(int playlistId) throws PlaylistException;
 
-	void removePlaylistByID(int playlistID) throws PlaylistException;
+    void removePlaylistByID(int playlistID) throws PlaylistException;
 
 }

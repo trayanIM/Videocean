@@ -1,6 +1,7 @@
 package com.videocean.controller;
 
 import java.util.List;
+import java.util.logging.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -19,8 +20,10 @@ import com.videocean.model.User;
 @Controller
 public class PlaylistController {
 
+	private Logger logger = Logger.getLogger(PlaylistController.class.getName());
+
 	@RequestMapping(method = RequestMethod.GET, value = "/playlist")
-	public String showClientDetails(Model viewModel, HttpServletRequest request) {
+	public String getPlaylistPage(Model viewModel, HttpServletRequest request) {
 		if (request.getSession().getAttribute("user") == null) {
 			return "error";
 		}
@@ -40,15 +43,14 @@ public class PlaylistController {
 				return "redirect:index";
 			}
 		} catch (PlaylistException e) {
-			e.printStackTrace();
-			System.out.println("greshka");
+			logger.info(e.getMessage());
 			return "redirect:history";
 		}
 		return "playlist";
 	}
 
 	@RequestMapping(method = RequestMethod.GET, value = "/playlist-{id}")
-	public String showClientDetails(@PathVariable("id") Integer id, Model viewModel, HttpServletRequest request) {
+	public String getPlaylistById(@PathVariable("id") Integer id, Model viewModel, HttpServletRequest request) {
 		if (request.getSession().getAttribute("user") == null) {
 			return "error";
 		}
@@ -74,8 +76,7 @@ public class PlaylistController {
 			}
 		} catch (PlaylistException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-			System.out.println("greshka");
+			logger.info(e.getMessage());
 			return "redirect:history";
 		}
 		return "playlist";

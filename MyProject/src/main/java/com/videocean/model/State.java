@@ -2,24 +2,24 @@ package com.videocean.model;
 
 public class State {
 
-	private int stateID;
-	private String name;
+    private int stateID;
+    private String name;
 
-	public State(int stateID, String name) {
-		this.stateID = stateID;
-		this.name = name;
-	}
+    public State(int stateID, String name) {
+        this.stateID = stateID;
+        this.name = name;
+    }
 
-	public String getName() {
-		return name;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public int getStateID() {
-		return stateID;
-	}
+    public int getStateID() {
+        return stateID;
+    }
 
 }

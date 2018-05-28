@@ -1,6 +1,7 @@
 package com.videocean.controller;
 
 import java.io.IOException;
+import java.util.logging.Logger;
 
 import javax.servlet.http.HttpServletResponse;
 
@@ -17,8 +18,10 @@ import com.google.gson.Gson;
 @org.springframework.web.bind.annotation.RestController
 public class RestController {
 
+	private Logger logger = Logger.getLogger(RestController.class.getName());
+
 	@RequestMapping(method = RequestMethod.GET, value = "/developers-{id}")
-	public void greeting(@PathVariable("id") Integer id, Model viewModel, HttpServletResponse response) {
+	public void getClipInformation(@PathVariable("id") Integer id, Model viewModel, HttpServletResponse response) {
 
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("application/json");
@@ -27,7 +30,7 @@ public class RestController {
 			jsonForThisClip = new ClipDAO().getClipByID(id);
 			response.getWriter().println(new Gson().toJson(jsonForThisClip));
 		} catch (ClipException | IOException e) {
-			e.printStackTrace();
+			logger.info(e.getMessage());
 		}
 	}
 }

@@ -9,8 +9,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class SubscriptionFollowerDAO extends AbstractDAO implements ISubscriptionFollowersDAO {
+
+	private Logger logger = Logger.getLogger(SubscriptionFollowerDAO.class.getName());
+
 	private static final String ADD_FOLLOWER_QUERY = "INSERT INTO followers VALUES (?, ?)";
 	private static final String DELETE_FOLLOWER_QUERY = "DELETE FROM followers WHERE user_id= ? and follower_id=?";
 	private static final String SELECT_SUBSCRIPTIONS_QUERY = "SELECT follower_id from followers where user_id=?";
@@ -33,16 +37,11 @@ public class SubscriptionFollowerDAO extends AbstractDAO implements ISubscriptio
 
 					ps.executeUpdate();
 				} catch (SQLException e) {
-					e.printStackTrace();
-					throw new UserException("There is no compozition with this subscription and this follower",
-							e);
+					String errorMessage = "There is no compozition with this subscription and this follower!";
+					logger.info(errorMessage);
+					throw new UserException(errorMessage, e);
 				} finally {
-					try {
-						if (ps != null)
-							ps.close();
-					} catch (SQLException e) {
-						e.printStackTrace();
-					}
+					closeConnection(ps);
 				}
 
 			}
@@ -59,15 +58,11 @@ public class SubscriptionFollowerDAO extends AbstractDAO implements ISubscriptio
 
 			ps.executeUpdate();
 		} catch (SQLException e) {
-			e.printStackTrace();
-			throw new UserException("There is no compozition with this subscription and this follower", e);
+			String errorMessage = "There is no compozition with this subscription and this follower!";
+			logger.info(errorMessage);
+			throw new UserException(errorMessage, e);
 		} finally {
-			try {
-				if (ps != null)
-					ps.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
+			closeConnection(ps);
 		}
 	}
 
@@ -96,15 +91,11 @@ public class SubscriptionFollowerDAO extends AbstractDAO implements ISubscriptio
 				subscriptions.add(user.getUserById(rs.getInt(1)));
 			}
 		} catch (SQLException | UserException e) {
-			e.printStackTrace();
-			throw new UserException("Can't give you the subscriptions or followers that you want", e);
+			String errorMessage = "Can't load the subscriptions or followers!";
+			logger.info(errorMessage);
+			throw new UserException(errorMessage, e);
 		} finally {
-			try {
-				if (ps != null)
-					ps.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
+			closeConnection(ps);
 		}
 		return subscriptions;
 
@@ -124,15 +115,11 @@ public class SubscriptionFollowerDAO extends AbstractDAO implements ISubscriptio
 				state = rs.getInt(1);
 			}
 		} catch (SQLException e) {
-			e.printStackTrace();
-			throw new UserException("Can't give you the subscriptions or followers that you want", e);
+			String errorMessage = "Can't load the subscriptions or followers!";
+			logger.info(errorMessage);
+			throw new UserException(errorMessage, e);
 		} finally {
-			try {
-				if (ps != null)
-					ps.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
+			closeConnection(ps);
 		}
 		return state;
 

@@ -6,8 +6,12 @@ import com.videocean.exception.UserException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.logging.Logger;
 
 public class LanguageDAO extends AbstractDAO implements ILanguageDAO {
+
+	private Logger logger = Logger.getLogger(LanguageDAO.class.getName());
+
 	private static final String SELECT_LANGUAGE_BY_ID_QUERY = "SELECT * FROM languages WHERE language_id = ?";
 	private static final String ADD_LANGUAGE_QUERY = "INSERT INTO languages VALUES (null, ?)";
 	private static final String SELECT_LANGUAGE_BY_NAME_QUERY = "SELECT * FROM languages WHERE language like ?";
@@ -32,13 +36,14 @@ public class LanguageDAO extends AbstractDAO implements ILanguageDAO {
 				return id.getInt(1);
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
-				throw new UserException("Can't add a language", e);
+				String errorMessage = "Unable to add language!";
+				logger.info(errorMessage);
+				throw new UserException(errorMessage, e);
 			} finally {
 				CategoryDAO.closeConnection(ps, id);
 			}
 		} else {
-			throw new UserException("Can't add a language");
+			throw new UserException("Unable to add language!");
 		}
 	}
 
@@ -60,8 +65,9 @@ public class LanguageDAO extends AbstractDAO implements ILanguageDAO {
 
 			return languageName;
 		} catch (SQLException e) {
-			e.printStackTrace();
-			throw new UserException("Can't find an language with ID : " + languageId, e);
+			String errorMessage = "Can't find a language with ID : " + languageId;
+			logger.info(errorMessage);
+			throw new UserException(errorMessage, e);
 		} finally {
 			CategoryDAO.closeConnection(ps, result);
 		}
@@ -85,8 +91,9 @@ public class LanguageDAO extends AbstractDAO implements ILanguageDAO {
 
 			return languageId;
 		} catch (SQLException e) {
-			e.printStackTrace();
-			throw new UserException("Can't find an language with this name : " + language, e);
+			String errorMessage = "Can't find an language with this name : " + language;
+			logger.info(errorMessage);
+			throw new UserException(errorMessage, e);
 		} finally {
 			CategoryDAO.closeConnection(ps, result);
 		}

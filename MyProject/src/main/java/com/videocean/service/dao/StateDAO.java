@@ -7,8 +7,11 @@ import com.videocean.model.TYPE;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.logging.Logger;
 
 public class StateDAO extends AbstractDAO implements IStateDAO {
+
+	private Logger logger = Logger.getLogger(StateDAO.class.getName());
 
 	@Override
 	public TYPE getStateByID(int stateID) throws ClipException {
@@ -26,15 +29,11 @@ public class StateDAO extends AbstractDAO implements IStateDAO {
 			return state;
 
 		} catch (SQLException e) {
-			e.printStackTrace();
-			throw new ClipException("Can't find a state with ID : " + stateID, e);
+			String errorMessage = "Can't find a state with ID : " + stateID;
+			logger.info(errorMessage);
+			throw new ClipException(errorMessage, e);
 		} finally {
-			try {
-				if (ps != null)
-					ps.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
+			closeConnection(ps);
 		}
 
 	}
@@ -51,15 +50,11 @@ public class StateDAO extends AbstractDAO implements IStateDAO {
 			int id = rs.getInt(1);
 			return id;
 		} catch (SQLException e) {
-			e.printStackTrace();
-			throw new ClipException("Can't find a state with this name!");
+			String errorMessage = "Can't find a state with this name!";
+			logger.info(errorMessage);
+			throw new ClipException(errorMessage);
 		} finally {
-			try {
-				if (ps != null)
-					ps.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
+			closeConnection(ps);
 		}
 
 	}

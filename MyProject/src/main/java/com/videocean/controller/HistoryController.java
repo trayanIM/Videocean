@@ -2,6 +2,7 @@ package com.videocean.controller;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -18,8 +19,10 @@ import com.videocean.exception.UserException;
 @Controller
 public class HistoryController {
 
+	private Logger logger = Logger.getLogger(HistoryController.class.getName());
+
 	@RequestMapping(method = RequestMethod.GET, value = "/history")
-	public String showClientDetails(Model viewModel, HttpServletRequest request) {
+	public String getUserHistory(Model viewModel, HttpServletRequest request) {
 
 		if (request.getSession().getAttribute("user") == null) {
 			return "error";
@@ -35,8 +38,7 @@ public class HistoryController {
 			viewModel.addAttribute("clips", clipsBack);
 		} catch (UserException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-			System.out.println("Empty history");
+			logger.info(e.getMessage());
 		}
 		return "history";
 	}

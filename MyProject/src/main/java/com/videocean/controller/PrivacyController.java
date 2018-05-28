@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @RequestMapping(value = "/privacy")
-public class Privacy {
+public class PrivacyController {
 
 	@RequestMapping(method = RequestMethod.GET)
-	public String sayHello(Model model) {
+	public String getPrivacyPage(Model model) {
 		return "privacy";
 	}
 

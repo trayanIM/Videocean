@@ -4,16 +4,16 @@ import com.videocean.exception.PlaylistException;
 
 public interface IPlaylist {
 
-	void addClipToPlaylist(Clip clip);
+    void addClipToPlaylist(Clip clip);
 
-	void removeClipFromPlaylist(Clip clip) throws PlaylistException;
+    void removeClipFromPlaylist(Clip clip) throws PlaylistException;
 
-	void changeState(TYPE state);
+    void changeState(TYPE state);
 
-	void increaseViewsOfPlaylist();
+    void increaseViewsOfPlaylist();
 
-	String getName();
+    String getName();
 
-	Object getOwner();
+    Object getOwner();
 
 }

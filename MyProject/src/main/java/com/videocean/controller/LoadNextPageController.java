@@ -2,6 +2,7 @@ package com.videocean.controller;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -15,21 +16,23 @@ import com.videocean.service.dao.ClipDAO;
 import com.videocean.exception.ClipException;
 
 @Controller
-public class LoadPreaviousController {
+public class LoadNextPageController {
 
-	@RequestMapping(method = RequestMethod.GET, value = "/loadprevious")
-	public String showClientDetails(Model viewModel, HttpServletRequest request) {
-		int min = (int) request.getSession().getAttribute("count");
+	private Logger logger = Logger.getLogger(LoadNextPageController.class.getName());
+
+	@RequestMapping(method = RequestMethod.GET, value = "/loadmore")
+	public String getNextPage(Model viewModel, HttpServletRequest request) {
+		int max = (int) request.getSession().getAttribute("count");
 		List<Clip> forOtherPage = new ArrayList<Clip>();
 		try {
 			List<Clip> clips = new ClipDAO().getAllClips();
-			if (min - 8 > 0) {
-				for (int first = min - 16; first < min - 8 && first < clips.size(); first++) {
+			if ((max - 1) < (clips.size() - 1)) {
+				for (int first = max; first < max + 8 && first < clips.size(); first++) {
 
 					forOtherPage.add(clips.get(first));
 
 				}
-				request.getSession().setAttribute("count", min - 8);
+				request.getSession().setAttribute("count", max + 8);
 				viewModel.addAttribute("clips", forOtherPage);
 				return "index";
 			} else {
@@ -38,7 +41,7 @@ public class LoadPreaviousController {
 
 		} catch (ClipException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			logger.info(e.getMessage());
 			return "redirect:index";
 		}
 

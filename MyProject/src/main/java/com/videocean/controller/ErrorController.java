@@ -7,12 +7,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @RequestMapping(value = "/error")
-public class Error {
+public class ErrorController {
 
-	@RequestMapping(method = RequestMethod.GET)
-	public String sayHello(Model model) {
-
-		return "error";
-	}
+    @RequestMapping(method = RequestMethod.GET)
+    public String getErrorPage(Model model) {
+        return "error";
+    }
 
 }
