@@ -58,9 +58,8 @@
     <div class="form">
         <h2>Login to your account</h2>
         <springForm:form action="signIn" method="post" commandName="user">
-            <springForm:input type="text" path="username" placeholder="Username"
-                              pattern="([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?"/>
-            <springForm:input type="password" path="password" placeholder="Password" pattern=".{6,}"/>
+            <springForm:input type="text" path="username" placeholder="Email Address"/>
+            <springForm:input type="password" path="password" placeholder="Password"/>
             <button>Login</button>
         </springForm:form>
         <c:if test="${not empty error}">
@@ -73,11 +72,12 @@
     <div class="form">
         <h2>Create an account</h2>
         <springForm:form action="signUp" method="post" commandName="user">
-            <springForm:input type="email" placeholder="Email  adress" path="username"
-                              pattern="([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?" autocomplete="on"/>
-            <springForm:input type="password" placeholder="Password" path="password" pattern=".{6,}"
-                              title="Въведената парола трябва по-дълга от 6 символа!"/>
-            <springForm:input type="text" placeholder="Full Name" path="fullName"/>
+            <springForm:input type="email" placeholder="Email Address" path="username"
+                              pattern="([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?" autocomplete="on" required="required"
+                              title="Валиден имейл адрес!"/>
+            <springForm:input type="password" placeholder="Password" path="password" pattern=".{6,}" required="required"
+                              title="Букви/цифри/специални символи като минималната дължина е 6 символа!"/>
+            <springForm:input type="text" placeholder="Full Name" path="fullName" required="required" pattern="[A-Za-z0-9]{1,20}"/>
             <button>Register</button>
         </springForm:form>
         <c:if test="${not empty error}">
