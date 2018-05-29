@@ -52,28 +52,35 @@
         <div class="main-grids news-main-grids">
             <div class="recommended-info">
                 <h3>Privacy Policy</h3>
-                <p class="history-text">There are many different ways you can use our services – to search for and share
+                <p class="history-text">There are many different ways you can use our services: to search for and share
                     information, to communicate with other people or to create new content. When you share information
-                    with us, for example by creating a Google Account, we can make those services even better – to show
-                    you more relevant search results and ads, to help you connect with people or to make sharing with
-                    others quicker and easier. As you use our services, we want you to be clear how we’re using
+                    with us, for example by creating a Account, we can make those services even better: to show
+                    you more relevant search results, to help you connect with people or to make sharing with
+                    others quicker and easier. As you use our services, we want you to be clear how we are using
                     information and the ways in which you can protect your privacy.
-                    <span>We’ve tried to keep it as simple as possible, but if you’re not familiar with terms like cookies, IP addresses, pixel tags and browsers, then read about these key terms first. Your privacy matters to Google so whether you are new to Google or a long-time user, please do take the time to get to know our practices – and if you have any questions contact us.
+                    <span>We have tried to keep it as simple as possible, but if you are not familiar with terms like cookies,
+                        IP addresses, pixel tags and browsers, then read about these key terms first.
+                        Your privacy matters to Videocean so whether you are new to Videocean or a long-time user,
+                        please do take the time to get to know our practices: and if you have any questions contact us.
 							</span>
                 </p>
                 <div class="terms-info">
                     <div class="terms-info-grid">
-                        <h3>1. Info about us</h3>
-                        <p>We collect information to provide better services to all of our users – from figuring out
-                            basic stuff like which language you speak, to more complex things like which ads you’ll find
-                            most useful, the people who matter most to you online, or which YouTube videos you might
+                        <h3>1. Information we collect</h3>
+                        <p>We collect information to provide better services to all of our users: from figuring out
+                            basic stuff like which language you speak, to more complex things like which videos you will find
+                            most useful, the people who matter most to you, or which Videocean videos you might
                             like.
                         </p>
                     </div>
                     <div class="terms-info-grid">
-                        We collect information to provide better services to all of our users – from figuring out basic
-                        stuff like which language you speak, to more complex things like which ads you’ll find most
-                        useful, the people who matter most to you online, or which YouTube videos you might like.
+                        <h3>2. Information protection</h3>
+                        <p>
+                            Videocean is built with strong security features that continuously protect your information.
+                            The insights we gain from maintaining our services help us detect and automatically block security
+                            threats from ever reaching you. And if we do detect something risky that we think you should know about,
+                            we will notify you and help guide you through steps to stay better protected.
+                        </p>
                     </div>
 
 

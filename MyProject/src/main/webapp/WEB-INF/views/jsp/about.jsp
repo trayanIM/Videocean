@@ -53,7 +53,7 @@
         <div class="main-grids about-main-grids">
             <div class="recommended-info">
                 <h3>About Videocean</h3>
-                <p class="history-text">We started yesterday!
+                <p class="history-text">
                 </p>
                 <div class="about-grids">
                     <div class="about-bottom-grids">
@@ -65,10 +65,9 @@
                                 </div>
                                 <div class="col-md-10 about-left-info">
                                     <a href="#">When We Started</a>
-                                    <p>Launched in May 2005, Videocean allows billions of people to discover, watch and
-                                        share originally-created videos. YouTube provides a forum for people to connect,
-                                        inform, and inspire others across the globe and acts as a distribution platform
-                                        for original content creators and advertisers large and small.</p>
+                                    <p>Launched in May 2018, Videocean allows people to discover, watch and
+                                        share originally-created videos. Videocean provides a system which helps people
+                                        to connect by subscribing for other people videos.</p>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -80,10 +79,13 @@
                                 </div>
                                 <div class="col-md-10 about-left-info">
                                     <a href="#">Community Guidelines</a>
-                                    <p>Launched in May 2005, Videocean allows billions of people to discover, watch and
-                                        share originally-created videos. YouTube provides a forum for people to connect,
-                                        inform, and inspire others across the globe and acts as a distribution platform
-                                        for original content creators and advertisers large and small.</p>
+                                    <p>By using our web-site you can create your own account and share all your
+                                        interests,
+                                        and passions. Also you can enjoy to our rich collection of videos (you can like
+                                        and dislike
+                                        them, subscribes for them and even use information for your own web-site by
+                                        using
+                                        our API). </p>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -98,10 +100,11 @@
                                 </div>
                                 <div class="col-md-10 about-left-info">
                                     <a href="#">About Our Site</a>
-                                    <p>Launched in May 2005, Videocean allows billions of people to discover, watch and
-                                        share originally-created videos. YouTube provides a forum for people to connect,
-                                        inform, and inspire others across the globe and acts as a distribution platform
-                                        for original content creators and advertisers large and small.</p>
+                                    <p>Our web-site mission is to provide a space for expression and to open the world
+                                        to everyone. We believe that everyone has the right to be heard and that the
+                                        world
+                                        is getting better when we listen, share and build a community through our
+                                        stories.</p>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -114,10 +117,8 @@
                                 </div>
                                 <div class="col-md-10 about-left-info">
                                     <a href="#">New Update</a>
-                                    <p>Launched in May 2005, Videocean allows billions of people to discover, watch and
-                                        share originally-created videos. YouTube provides a forum for people to connect,
-                                        inform, and inspire others across the globe and acts as a distribution platform
-                                        for original content creators and advertisers large and small.</p>
+                                    <p>Our next version will be released in 2020 on the protection of the master
+                                        degree.</p>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -133,10 +134,7 @@
                                 </div>
                                 <div class="col-md-10 about-left-info">
                                     <a href="#">Careers</a>
-                                    <p>Launched in May 2005, YouTube allows billions of people to discover, watch and
-                                        share originally-created videos. YouTube provides a forum for people to connect,
-                                        inform, and inspire others across the globe and acts as a distribution platform
-                                        for original content creators and advertisers large and small.</p>
+                                    <p>The project was created by one full stack bachelor developer. </p>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>
@@ -148,10 +146,8 @@
                                 </div>
                                 <div class="col-md-10 about-left-info">
                                     <a href="#">Contact Us</a>
-                                    <p>Launched in May 2005, YouTube allows billions of people to discover, watch and
-                                        share originally-created videos. YouTube provides a forum for people to connect,
-                                        inform, and inspire others across the globe and acts as a distribution platform
-                                        for original content creators and advertisers large and small.</p>
+                                    <p>If you have any questions don't hesitate to contact us. Our email address is
+                                        videocean.creators@gmail.com.</p>
                                 </div>
                                 <div class="clearfix"></div>
                             </div>

@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-         pageEncoding="ISO-8859-1" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" %>
 <%@ taglib prefix="springForm"
            uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c"
@@ -65,6 +65,7 @@
         </springForm:form>
         <c:if test="${not empty error}">
             <p style="color:red">
+                <br/>
                 Error: ${error}
             </p>
         </c:if>
@@ -74,13 +75,15 @@
         <springForm:form action="signUp" method="post" commandName="user">
             <springForm:input type="email" placeholder="Email  adress" path="username"
                               pattern="([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?" autocomplete="on"/>
-            <springForm:input type="password" placeholder="Password" path="password" pattern=".{6,}"/>
+            <springForm:input type="password" placeholder="Password" path="password" pattern=".{6,}"
+                              title="Въведената парола трябва по-дълга от 6 символа!"/>
             <springForm:input type="text" placeholder="Full Name" path="fullName"/>
             <button>Register</button>
         </springForm:form>
         <c:if test="${not empty error}">
-            <center><p style="color:red; position:center;"></center>
-            Error: ${error}
+            <p style="color:red; position:center;">
+                <br/>
+                Error: ${error}
             </p>
         </c:if>
     </div>

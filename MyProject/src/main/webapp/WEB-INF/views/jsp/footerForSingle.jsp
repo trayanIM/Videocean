@@ -9,7 +9,7 @@
 							<ul>
 								<li><a href="about"><spring:message code="about.name" /></a></li>
 								<li><a href="creators"><spring:message code="creators.name" /></a></li>
-								<li><a href="http://ittalents.bg/home"><spring:message code="advertise.name" /></a></li>
+								<li><a href="https://tu-sofia.bg"><spring:message code="advertise.name" /></a></li>
 								<li><a href="developers-${clip.clipID}">API</a></li>
 							</ul>
 						</div>

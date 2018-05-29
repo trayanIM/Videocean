@@ -49,7 +49,8 @@
 
 
 <div class="developers">
-    <div class="developers-banner creators-banner">
+    <!--<div class="developers-banner creators-banner">-->
+    <div class="developers-banner">
         <!-- container -->
         <div class="container">
             <div class="developers-info">
@@ -67,12 +68,12 @@
         <div class="container">
             <div class="col-md-4 creators-top-grid">
                 <div class="creators-grid">
-                    <a href="single">Trayan Muchev</a>
-                    <p>Age : 20 </p>
+                    <a>Trayan Muchev</a>
+                    <p>Age : 22 </p>
                     <br/>
                     <p>Born in Sliven in 1995 </p>
                     <br/>
-                    <p>Education:Finished 5th season of IT Talents Java EE </p>
+                    <p>F.Number: 121214078 </p>
                     <br/>
                     <p>Education: Software Engineering TU Sofia </p>
                     <br/>
@@ -80,27 +81,27 @@
             </div>
             <div class="col-md-4 creators-top-grid">
                 <div class="creators-grid">
-                    <a href="single">Christian Stoynov</a>
-                    <p>Age : 21 </p>
+                    <a>Contacts</a>
+                    <p>Email : videocean.creators@gmail.com </p>
                     <br/>
-                    <p>Born in Stara Zagora in 1994 </p>
+                    <p>Skype: videocean.creators</p>
                     <br/>
-                    <p>Education:Finished 5th season of IT Talents Java EE </p>
+                    <p>Cellphone: 0883200555 </p>
                     <br/>
-                    <p>Education: Software Engineering TU Sofia </p>
+                    <p>Address: Jk. Studentski Grad block 3 </p>
                     <br/>
                 </div>
             </div>
             <div class="col-md-4 creators-top-grid">
                 <div class="creators-grid">
-                    <a href="single">Radoslav Yanchev</a>
-                    <p>Age : 29 </p>
+                    <a>Accomplishments</a>
+                    <p>Education: Finished 5th season of IT Talents </p>
                     <br/>
-                    <p>Born in Dimitrovgrad in 1986 </p>
+                    <p>Job: Java Regular Developer in EPAM Systems </p>
                     <br/>
-                    <p>Education:Finished 5th season of IT Talents Java EE </p>
+                    <p>Job: More than 2 years working experience </p>
                     <br/>
-                    <p>Education: TU Sofia </p>
+                    <p>Sports: First racket of TU tennis team </p>
                     <br/>
                 </div>
             </div>
@@ -120,24 +121,21 @@
                         <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
                     </div>
                     <h4>Global</h4>
-                    <p>Lorem Ipsum is simply Ipsum has been the industry's text of the printing and typesetting
-                        industry. </p>
+                    <p>We are trying to reach as many people all over the world!</p>
                 </div>
                 <div class="col-md-4 creators-bottom-grid green">
                     <div class="services-icon">
                         <span class="glyphicon glyphicon-magnet" aria-hidden="true"></span>
                     </div>
                     <h4>Engaging</h4>
-                    <p>Lorem Ipsum is simply Ipsum has been the industry's text of the printing and typesetting
-                        industry. </p>
+                    <p> And all we are doing is for your pleasure!</p>
                 </div>
                 <div class="col-md-4 creators-bottom-grid red">
                     <div class="services-icon">
                         <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
                     </div>
                     <h4>Helpful</h4>
-                    <p>Lorem Ipsum is simply Ipsum has been the industry's text of the printing and typesetting
-                        industry. </p>
+                    <p>We are trying to help you spend your time better!</p>
                 </div>
                 <div class="clearfix"></div>
             </div>
