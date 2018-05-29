@@ -10,4 +10,6 @@ public interface ILanguageDAO {
 
     int getLanguageByName(String language) throws UserException;
 
+    void removeLanguage(int languageId) throws UserException;
+
 }

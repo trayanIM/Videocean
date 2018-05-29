@@ -136,7 +136,7 @@ public class ClipDAO extends AbstractDAO implements IClipDAO {
         } catch (SQLException | UserException | CategoryException e) {
             String errorMessage = "Clip with the specified Id does not exist!";
             logger.info(errorMessage);
-            throw new ClipException("Clip with the specified Id does not exist!");
+            throw new ClipException(errorMessage);
         } finally {
             CategoryDAO.closeConnection(ps, rs);
         }

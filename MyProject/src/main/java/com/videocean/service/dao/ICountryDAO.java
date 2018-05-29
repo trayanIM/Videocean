@@ -10,4 +10,6 @@ public interface ICountryDAO {
 
     int getCountryByName(String countryName) throws UserException;
 
+    void removeCountry(int countryId) throws UserException;
+
 }

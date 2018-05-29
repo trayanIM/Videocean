@@ -15,6 +15,7 @@ public class CountryDAO extends AbstractDAO implements ICountryDAO {
     private static final String SELECT_COUTRY_BY_ID_QUERY = "SELECT * FROM countries WHERE country_id = ?";
     private static final String ADD_COUNTRY_QUERY = "INSERT INTO countries VALUES (null, ?)";
     private static final String SELECT_COUTRY_BY_NAME_QUERY = "SELECT * FROM countries WHERE country_name like ?";
+    private static final String DELETE_FROM_COUNTRY_BY_ID = "DELETE FROM countries WHERE country_id = ?;";
 
     /*
      * (non-Javadoc)
@@ -94,6 +95,20 @@ public class CountryDAO extends AbstractDAO implements ICountryDAO {
             throw new UserException(errorMessage, e);
         } finally {
             CategoryDAO.closeConnection(ps, result);
+        }
+    }
+
+    @Override
+    public void removeCountry(int countryId) throws UserException {
+        PreparedStatement ps = null;
+        try {
+            ps = getCon().prepareStatement(DELETE_FROM_COUNTRY_BY_ID);
+            ps.setInt(1, countryId);
+            ps.executeUpdate();
+        } catch (Exception e) {
+            throw new UserException("A problem appeared while deleting country with id " + countryId , e);
+        } finally {
+            closeConnection(ps);
         }
     }
 

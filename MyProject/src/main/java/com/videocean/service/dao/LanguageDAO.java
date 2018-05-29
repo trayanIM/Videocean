@@ -15,6 +15,7 @@ public class LanguageDAO extends AbstractDAO implements ILanguageDAO {
 	private static final String SELECT_LANGUAGE_BY_ID_QUERY = "SELECT * FROM languages WHERE language_id = ?";
 	private static final String ADD_LANGUAGE_QUERY = "INSERT INTO languages VALUES (null, ?)";
 	private static final String SELECT_LANGUAGE_BY_NAME_QUERY = "SELECT * FROM languages WHERE language like ?";
+	private static final String DELETE_FROM_LANGUAGE_BY_ID = "DELETE FROM languages WHERE language_id = ?;";
 
 	/*
 	 * (non-Javadoc)
@@ -96,6 +97,20 @@ public class LanguageDAO extends AbstractDAO implements ILanguageDAO {
 			throw new UserException(errorMessage, e);
 		} finally {
 			CategoryDAO.closeConnection(ps, result);
+		}
+	}
+
+	@Override
+	public void removeLanguage(int languageId) throws UserException {
+		PreparedStatement ps = null;
+		try {
+			ps = getCon().prepareStatement(DELETE_FROM_LANGUAGE_BY_ID);
+			ps.setInt(1, languageId);
+			ps.executeUpdate();
+		} catch (Exception e) {
+			throw new UserException("A problem appeared while deleting language with id " + languageId , e);
+		} finally {
+			closeConnection(ps);
 		}
 	}
 }
