@@ -67,9 +67,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         </div>
                     </div>
                     <div class="resent-grid-info recommended-grid-info">
-                        <h3><a href="single.html" class="title title-info">${clip.name}</a></h3>
+                        <h3><a href="single-${clip.clipID}" class="title title-info">${clip.name}</a></h3>
                         <ul>
-                            <li><p class="author author-info"><a href="#" class="author"> ${clip.owner.fullName}</a></p>
+                            <li><p class="author author-info"><a href="user-${clip.owner.userID}" class="author"> ${clip.owner.fullName}</a></p>
                             </li>
                             <li class="right-list"><p class="views views-info"> ${clip.views} views</p></li>
                         </ul>
