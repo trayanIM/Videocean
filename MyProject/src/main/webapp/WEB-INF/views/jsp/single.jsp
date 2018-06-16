@@ -83,7 +83,7 @@
             </div>
             <div class="song-grid-right">
                 <div class="share">
-                    <h5>Share</h5>
+                    <h5>Statistics</h5>
                     <ul>
                         <li><!--  <a target="_blank"
 								href="https://www.facebook.com/sharer/sharer.php?u=single-${currentID}"
