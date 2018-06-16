@@ -16,7 +16,6 @@ public class Clip implements IClip {
     private int dislikes;
     private Category category;
     private String clipURL;
-
     private List<Comment> comments;
     private TYPE state;
     private LocalDate datePublished;

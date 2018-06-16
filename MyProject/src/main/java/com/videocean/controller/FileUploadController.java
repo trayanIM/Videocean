@@ -128,8 +128,6 @@ public class FileUploadController {
 						playlistId = playlist.getPlaylistID();
 					}
 					plDAO.addClipToPlaylist(playlistId, clipId);
-					// user.addClipToMyClips(clip);
-					// user.getMyClips().setPlaylistID(playlistId);
 					request.setAttribute("user", user);
 				} catch (PlaylistException | UserException | ClipException e) {
 					// TODO Auto-generated catch block

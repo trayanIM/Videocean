@@ -170,13 +170,13 @@ public class ClipDAO extends AbstractDAO implements IClipDAO {
 
     }
 
-    public List<Clip> getClipsByStringInName(String serachString) throws ClipException {
+    public List<Clip> getClipsByStringInName(String searchString) throws ClipException {
         List<Clip> allClips = new ArrayList<Clip>();
         PreparedStatement ps = null;
         ResultSet rs = null;
         try {
             ps = getCon().prepareStatement(SELECT_FROM_CLIPS_BY_CONTAINED_STRING_IN_NAME);
-            ps.setString(1, "%" + serachString + "%");
+            ps.setString(1, "%" + searchString + "%");
             rs = ps.executeQuery();
             UserDAO userDao = new UserDAO();
             StateDAO stateDao = new StateDAO();

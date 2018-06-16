@@ -56,8 +56,7 @@ public class SingleClipController {
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/single-{id}/like")
-    public @ResponseBody
-    String addLikeToClip(@PathVariable("id") Integer id, Model viewModel,
+    public @ResponseBody String addLikeToClip(@PathVariable("id") Integer id, Model viewModel,
                          HttpServletRequest request) {
         int likes = 0;
         int dislikes = 0;
@@ -111,7 +110,6 @@ public class SingleClipController {
         int dislikes = 0;
         int likes = 0;
         String stLikes = null;
-        System.out.println("INNNNNNNNNN");
         String stDislikes = null;
         UserDAO userDao = new UserDAO();
         updateDislikes(id, viewModel, request, dislikes, userDao);

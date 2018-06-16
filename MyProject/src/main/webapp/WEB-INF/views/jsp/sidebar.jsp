@@ -54,7 +54,7 @@
 						</script>
 					<div class="side-bottom">
 						<div class="copyright">
-							<p>Copyright © 2015 Videocean. All Rights Reserved | Design by <a href="http://videocean.com/">VOTeam</a></p>
+							<p>Copyright © 2018 Videocean. All Rights Reserved | Design by <a href="http://videocean.com/">VOTeam</a></p>
 						</div>
 					</div>
 				</div>
