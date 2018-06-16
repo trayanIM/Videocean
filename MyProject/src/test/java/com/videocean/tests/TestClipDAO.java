@@ -34,6 +34,11 @@ public class TestClipDAO {
         this.userId = userDAO.addUser(user);
     }
 
+//    @Test
+//    public void delete() throws SQLException, ClipException, UserException, CategoryException {
+//        clipDAO.removeClip(159);
+//    }
+
     @After
     public void tearDown() throws UserException {
         userDAO.removeUser(userId);

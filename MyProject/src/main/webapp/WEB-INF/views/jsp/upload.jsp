@@ -67,9 +67,6 @@
                         $("#file").fileinput();
                     });
                 </script>
-                <div class="has-error">
-                    <form:errors path="file" class="help-inline"/>
-                </div>
             </div>
             <div class="form-group">
 
@@ -91,26 +88,19 @@
             <br>
             <br>
             <br>
-            <br>
             <div class="form-actions floatRight">
                 <input type="submit" value="Upload" class="btn btn-primary">
                 <button type="reset" class="btn btn-default btn-reset">Reset</button>
             </div>
-
-
+            <div class="cta">
+                <a href="<c:url value='/index' />">Home</a>
+            </div>
+            <br>
+            <div class="has-error">
+                <form:errors path="file" class="has-error"/>
+            </div>
         </form:form>
-        <c:if test="${not empty error}">
-            <p style="color: red">Error: ${error}</p>
-        </c:if>
-        <div class="cta">
-            <a href="<c:url value='/index' />">Home</a>
-        </div>
-
-
     </div>
-
 </div>
-
-
 </body>
 </html>

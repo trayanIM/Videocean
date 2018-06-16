@@ -12,10 +12,12 @@ public class FileValidator implements Validator {
     }
 
     public void validate(Object obj, Errors errors) {
-        FileBucket file = (FileBucket) obj;
+        FileBucket fileBucket = (FileBucket) obj;
 
-        if (file.getFile() != null) {
-            if (file.getFile().getSize() == 0) {
+        if (fileBucket.getFile() == null || fileBucket.getName() == null || fileBucket.getName().isEmpty()) {
+            errors.rejectValue("file", "missing.file");
+        } else if (fileBucket.getFile() != null) {
+            if (fileBucket.getFile().getSize() == 0) {
                 errors.rejectValue("file", "missing.file");
             }
         }
